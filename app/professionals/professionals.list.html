@@ -1,0 +1,99 @@
+<div class="row">
+    <ol class="breadcrumb">
+        <li><a href="#/">Home</a></li>
+        <li><a href="#/listProfessionals" class="active">Profissionais</a></li>
+    </ol>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Profissionais</h4>
+                </div>
+                <div class="col-md-3 col-md-offset-3">
+                    <form action="" class="search-form">
+                        <div class="form-group has-feedback">
+                            <label for="search" class="sr-only">Search</label>
+                            <input type="text"
+                                   class="form-control"
+                                   name="search"
+                                   id="search"
+                                   placeholder="Buscar"
+                                   data-ng-model="search">
+                            <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="panel-body">
+            <table class="table
+                          table-striped
+                          table-hover
+                          table-bordered
+                          table-condensed">
+                <thead>
+                    <tr>
+                        <th widh="38%">Nome</th>
+                        <th widh="40%">E-mail</th>
+                        <th width="15%">CPF</th>
+                        <th width="15%">Telefone</th>
+                        <th width="15%">Ações</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td><strong>Total</strong></td>
+                        <td colspan="4">{{ProfessionalsCtrl.getTotalProfessionals()}}</td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr data-ng-repeat="professional in ProfessionalsCtrl.professionals | filter:search | filter:searchText track by professional._id"
+                        data-ng-show="professional._id">
+                        <!-- <a data-ng-click="ProfessionalsCtrl.openLista(ProfessionalsCtrl.id)" href=""></a> -->
+                        <td>{{professional.name}}
+                        </td>
+                        <td>
+                            {{professional.email}}
+                        </td>
+                        <td>
+                            {{professional.cpf}}
+                        </td>
+                        <td>
+                            {{professional.phone}}
+                        </td>
+                        <td align="center">
+                            <div class="btn-group">
+                                <a data-ng-click="ProfessionalsCtrl.openLista(professional.id)"
+                                   class="btn btn-default btn-sm"
+                                   popover="Incluir Itens"
+                                   popover-trigger="mouseenter">
+                                    <i class="btn-small glyphicon glyphicon-plus"></i>
+                                </a>
+                                <a href="#/editList/{{professional.id}}"
+                                   popover="Editar"
+                                   popover-trigger="mouseenter"
+                                   class="btn btn-default btn-sm">
+                                <i class="btn-small glyphicon glyphicon-edit"></i>
+                                </a>
+                                <a data-ng-click="ProfessionalsCtrl.deletar(professional.id)"
+                                   popover="Remover"
+                                   popover-trigger="mouseenter"
+                                   class="btn btn-default btn-sm">
+                                    <i class="glyphicon glyphicon-trash"></i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="panel-footer">
+            <pagination class="pagination"
+                        total-items="ListasCtrl.totalItems"
+                        items-per-page="ListasCtrl.itemsPerPage"
+                        ng-model="ListasCtrl.currentPage"
+                        ng-change="ListasCtrl.pageChanged()">
+            </pagination>
+        </div>
+    </div>
+</div>
