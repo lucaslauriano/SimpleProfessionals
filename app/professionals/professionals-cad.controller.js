@@ -56,7 +56,7 @@
 
         function _deletar() {
             return ProfessionalService.deletar(viewModel.professional.id).then(function() {
-                console.log("deleta")
+                console.log("deleta");
                 goToListarProfessionals();
             });
         }
@@ -67,7 +67,6 @@
             }
             return isClean();
         }
-
 
         function _salvar() {
             return ProfessionalService.salvar(viewModel.professional).then(function() {
