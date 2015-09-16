@@ -40,26 +40,35 @@
                         });
                     }
                 }
+            })
+            .state('editProfessional', {
+                url: '/editProfessional/:idprofessional',
+                templateUrl: '../professionals/professionals.cad.html',
+                controller: 'app.professionals.ProfessionalCadCtrl',
+                controllerAs: 'ProfessionalCadCtrl',
+                resolve: {
+                    professional: function(Restangular, $stateParams) {
+                        return Restangular.one('professionals', $stateParams.idprofessional).get();
+                    }
+                }
             });
 
         RestangularProvider.setBaseUrl('http://api.achronic.com');
         RestangularProvider.setRestangularFields({
-              id: "_id"
+            id: "_id"
         });
         RestangularProvider.addResponseInterceptor(function(professionals, operation, what, url, response, deferred) {
-          var extractedData;
-         
+            var extractedData;
 
-          if (operation === "getList") {
-            extractedData = professionals.data;
-           
-          } else {
-            extractedData = professionals;
-           
-          }
-          return extractedData;
+
+            if (operation === "getList") {
+                extractedData = professionals.data;
+
+            } else {
+                extractedData = professionals;
+
+            }
+            return extractedData;
         });
     }
 })();
-
-

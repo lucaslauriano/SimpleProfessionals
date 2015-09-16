@@ -18,7 +18,7 @@
         'professional'
     ];
 
-    function ProfessionalCadCtrl($injector, $location) {
+    function ProfessionalCadCtrl($injector, $location, professional) {
 
         var ProfessionalService = $injector.get('app.professionals.ProfessionalService');
         var viewModel = this;
@@ -66,6 +66,7 @@
             }
             return isClean();
         }
+
 
         function _salvar() {
             return ProfessionalService.salvar(viewModel.professional).then(function() {
