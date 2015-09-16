@@ -10,6 +10,7 @@
 
     function ProfessionalsCtrl($injector) {
         var viewModel = this;
+
         var ProfessionalService = $injector.get('app.professionals.ProfessionalService');
 
         var PublicProparties = {
@@ -22,35 +23,36 @@
         init();
 
         function init() {
+
+
+
+            var professionals;
+
             ProfessionalService.getList(page(), pageSize()).then(function(professionals) {
                 viewModel.professionals = professionals;
                 viewModel.professionals.isLast = professionals.isLast;
+
+                console.log("VIEW MODEL: " + viewModel.professionals);
+                console.log("VIEW MODEL is Last: " + viewModel.professionals.isLast);
+
             });
 
-         
+            professionals = viewModel.professionals;
 
         }
 
 
 
+        console.log("viewmodel: - " + viewModel);
 
-        // viewModel.professionals = angular.copy(professionals);
+
         // viewModel.professionals.isLast = angular.copy(professionals.isLast);
-
-        // console.log("VIEW MODEL: " + viewModel.professionals);
-        // console.log("VIEW MODEL is Last: " + viewModel.professionals.isLast);
-
-        // if (viewModel.professionals.isLast === true) {
-        //     console.log("TRUL PORRA");
-        // }
-
+        // viewModel.professionals = angular.copy(professionals);
         // viewModel.professionals = angular.copy(viewModel.professionals);
-
-        // console.log("viewmodel: - " + viewModel);
         // console.log("viewmodel.Professional: - " + viewModel.professionals);
-        // viewModel.professionals.maxSize = 4;
-        // viewModel.professionals.pageSize = pageSize();
-        // viewModel.professionals.currentPage = page();
+        viewModel.maxSize = 4;
+        viewModel.pageSize = pageSize();
+        viewModel.currentPage = page();
         // viewModel.total = getTotalProfissional();
 
 
@@ -89,23 +91,9 @@
 
             function removerView(idProfessional) {
                 viewModel.professionals = _.reject(viewModel.professionals, function(professional) {
-                    return idProfessional === professional.id;
+                    return idProfessional === professional._id;
                 });
             }
         }
-
-        // function _openModal(idProfessional) {
-        //     $modal.open({
-        //         templateUrl: 'professionals/professionals.modal.html',
-        //         controller: 'app.professionals.ProfessionalsModalCtrl',
-        //         controllerAs: 'ProfessionalsModalCtrl',
-        //         resolve: {
-        //             id: function() {
-        //                 return idProfessional;
-        //             }
-        //         }
-        //     });
-        // }
-
     }
 })();
