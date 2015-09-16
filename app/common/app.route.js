@@ -9,6 +9,7 @@
 
      * Configuration of the app.route
      */
+
     angular
         .module('app.route', [])
         .config(config);
@@ -28,6 +29,17 @@
                 controller: 'app.professionals.ProfessionalsCtrl',
                 controllerAs: 'ProfessionalsCtrl'
             })
+            .state('editProfessional', {
+                url: '/editProfessional:idProfessional',
+                templateUrl: '../professionals/professionals.cad.html',
+                controller: 'app.professionals.ProfessionalsCtrl',
+                controllerAs: 'ProfessionalsCtrl',
+                resolve: {
+                    professional: function(Restangular, $stateParams) {
+                        return Restangular.one('professionals', $stateParams.idProfessional).get();
+                    }
+                }
+            })
             .state('newProfessional', {
                 url: '/newProfessional',
                 templateUrl: '../professionals/professionals.cad.html',
@@ -40,17 +52,6 @@
                         });
                     }
                 }
-            })
-            .state('editProfessional', {
-                url: '/editProfessional/:idprofessional',
-                templateUrl: '../professionals/professionals.cad.html',
-                controller: 'app.professionals.ProfessionalCadCtrl',
-                controllerAs: 'ProfessionalCadCtrl',
-                resolve: {
-                    professional: function(Restangular, $stateParams) {
-                        return Restangular.one('professionals', $stateParams.idprofessional).get();
-                    }
-                }
             });
 
         RestangularProvider.setBaseUrl('http://api.achronic.com');
@@ -58,16 +59,17 @@
             id: "_id"
         });
         RestangularProvider.addResponseInterceptor(function(professionals, operation, what, url, response, deferred) {
+
             var extractedData;
 
             if (operation === "getList") {
                 extractedData = professionals.data;
+                extractedData.isLast = professionals.isLast;
 
             } else {
                 extractedData = professionals;
-
             }
             return extractedData;
-        });   
+        });
     }
 })();

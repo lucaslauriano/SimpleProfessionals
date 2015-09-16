@@ -32,9 +32,6 @@
         function init() {
         }
 
-
-        
-
         function _get(id, _q) {
             return Restangular.one('professionals', id).customGET("professionals", {q: _q});
         }

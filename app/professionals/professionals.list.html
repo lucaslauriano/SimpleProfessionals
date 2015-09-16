@@ -33,11 +33,11 @@
                           table-condensed">
                 <thead>
                     <tr>
-                        <th widh="38%">Nome</th>
-                        <th widh="40%">E-mail</th>
+                        <th widh="30%">Nome</th>
+                        <th widh="30%">E-mail</th>
                         <th width="15%">CPF</th>
                         <th width="15%">Telefone</th>
-                        <th width="15%">Ações</th>
+                        <th width="10%">Ações</th>
                     </tr>
                 </thead>
                 <tfoot>
@@ -63,12 +63,6 @@
                         </td>
                         <td align="center">
                             <div class="btn-group">
-                                <a data-ng-click="ProfessionalsCtrl.openModal(professional._id)"
-                                   class="btn btn-default btn-sm"
-                                   popover="Incluir"
-                                   popover-trigger="mouseenter">
-                                    <i class="btn-small glyphicon glyphicon-plus"></i>
-                                </a>
                                 <a href="#/editProfessional/{{professional._id}}"
                                    popover="Editar"
                                    popover-trigger="mouseenter"
@@ -97,6 +91,13 @@
               class="pagination-sm" 
               >
             </pagination>
+             <a 
+                 popover="Editar"
+                 popover-trigger="mouseenter"
+                 class="btn btn-default btn-sm"
+                 data-ng-click="ProfessionalsCtrl.getIsLast()">
+              <i class="btn-small glyphicon glyphicon-edit"></i>
+              </a>
         </div>
     </div>
 </div>
