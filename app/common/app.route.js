@@ -60,7 +60,6 @@
         RestangularProvider.addResponseInterceptor(function(professionals, operation, what, url, response, deferred) {
             var extractedData;
 
-
             if (operation === "getList") {
                 extractedData = professionals.data;
 
@@ -69,6 +68,6 @@
 
             }
             return extractedData;
-        });
+        });   
     }
 })();

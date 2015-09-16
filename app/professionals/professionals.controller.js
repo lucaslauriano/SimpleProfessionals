@@ -8,7 +8,7 @@
         '$injector'
     ];
 
-    function ProfessionalsCtrl($injector, $modal) {
+    function ProfessionalsCtrl($injector) {
         var viewModel = this;
         var ProfessionalService = $injector.get('app.professionals.ProfessionalService');
 
@@ -22,9 +22,39 @@
         init();
 
         function init() {
-            ProfessionalService.getList().then(function(professionals) {
+            ProfessionalService.getList(page(), pageSize()).then(function(professionals) {
                 viewModel.professionals = professionals;
             });
+        }
+
+        viewModel.maxSize = 3;
+
+        // viewModel.filteredTodos = [];
+
+        // viewModel.$watch('currentPage + numPerPage', function() {
+        //     var begin = ((viewModel.page() - 1) * viewModel.pageSize()),
+        //         end = begin + viewModel.pageSize();
+
+        //    viewModel.filteredTodos = viewModel.professionals.slice(begin, end);
+        // });
+
+        function _currentPage() {
+            var curPage = page();
+            return curPage;
+        }
+
+        function _maxSize() {
+            var pgSize = pageSize();
+            return pgSize;
+        }
+
+
+        function page() {
+            return 1;
+        }
+
+        function pageSize() {
+            return 6;
         }
 
         function _deletar(idProfessional) {
@@ -38,7 +68,6 @@
                 });
             }
         }
-
 
         function _getTotalProfessionals() {
             return viewModel.professionals && viewModel.professionals.length;

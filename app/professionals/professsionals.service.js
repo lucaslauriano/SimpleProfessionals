@@ -30,15 +30,14 @@
         init();
 
         function init() {
-
         }
 
-        function _get(id) {
-            return Restangular.one('professionals', id).get();
+        function _get(id, _q) {
+            return Restangular.one('professionals', id).customGET("professionals", {q: _q});
         }
 
-        function _getList() {
-            return Restangular.all('professionals').getList();
+        function _getList(_page, _pageSize) {
+            return Restangular.all('professionals').customGETLIST("", {page: _page, pageSize: _pageSize});
         }
 
         function _salvar(professional) {
@@ -51,6 +50,5 @@
             return Restangular.one('professionals', idProfessional).remove();
         }
     }
-
 })();
 

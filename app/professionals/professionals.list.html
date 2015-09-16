@@ -63,7 +63,7 @@
                         </td>
                         <td align="center">
                             <div class="btn-group">
-                                <a data-ng-click="ProfessionalsCtrl.openLista(professional.id)"
+                                <a data-ng-click="ProfessionalsCtrl.openModal(professional._id)"
                                    class="btn btn-default btn-sm"
                                    popover="Incluir"
                                    popover-trigger="mouseenter">
@@ -88,11 +88,12 @@
             </table>
         </div>
         <div class="panel-footer">
-            <pagination class="pagination"
-                        total-items="ListasCtrl.totalItems"
-                        items-per-page="ListasCtrl.itemsPerPage"
-                        ng-model="ListasCtrl.currentPage"
-                        ng-change="ListasCtrl.pageChanged()">
+            <pagination 
+              total-items="ProfessionalsCtrl.professionals.length" 
+              ng-model="ProfessionalsCtrl.currentPage" 
+              max-size="ProfessionalsCtrl.maxSize" 
+              class="pagination-sm" 
+              boundary-links="true">
             </pagination>
         </div>
     </div>
