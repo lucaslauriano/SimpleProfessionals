@@ -399,6 +399,62 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 2461,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app.sublime.sublime-project",
+			"settings":
+			{
+				"buffer_size": 153,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "professionals/professionals.list.html",
+			"settings":
+			{
+				"buffer_size": 4418,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "professionals/professionals.cad.html",
+			"settings":
+			{
+				"buffer_size": 4678,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "professionals/professionals.controller.js",
+			"settings":
+			{
+				"buffer_size": 3007,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "professionals/professsionals.service.js",
+			"settings":
+			{
+				"buffer_size": 1446,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "common/app.route.js",
+			"settings":
+			{
+				"buffer_size": 2553,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -505,22 +561,27 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD"
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD",
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/content/images",
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/content/styles"
 	],
 	"file_history":
 	[
-		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/common/app.route.js",
-		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professsionals.service.js",
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app.sublime.sublime-workspace",
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app.sublime.sublime-project",
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/professional.sublime-workspace",
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/app.sublime.sublime-project",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.controller.js",
-		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.cad.html",
-		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.list.html",
-		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/index.html",
-		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/professional.sublime-project",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals-cad.controller.js",
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/common/app.route.js",
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.cad.html",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/common/app.core.js",
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/index.html",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/main/dashboard.html",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/app.js",
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.list.html",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/main/nav-bar.html",
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professsionals.service.js",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/bower.json",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/main/dashboard.directive.js",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/content/styles/main.css",
@@ -633,10 +694,7 @@
 		"/C/Users/Lucas/Desktop/Mongoose/EasyDelivery/content/css/styles/main.css",
 		"/C/Users/Lucas/Desktop/Mongoose/EasyDelivery/content/css/styles/compras.css",
 		"/C/Users/Lucas/Desktop/Mongoose/EasyDelivery/content/css/main.css",
-		"/C/Users/Lucas/Desktop/APPP/app/app/index.html",
-		"/C/Users/Lucas/Desktop/Nova pasta/TODO/src/main/nav-bar.html",
-		"/C/Users/Lucas/Desktop/EasyDelivery/index.html",
-		"/C/Users/Lucas/Desktop/EasyDelivery/views/service.html"
+		"/C/Users/Lucas/Desktop/APPP/app/app/index.html"
 	],
 	"find":
 	{
@@ -858,8 +916,217 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2461,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								342,
+								342
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app.sublime.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 153,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								135,
+								135
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "professionals/professionals.list.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4418,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2651,
+								2651
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 524.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "professionals/professionals.cad.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4678,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3851,
+								3851
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 126.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "professionals/professionals.controller.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3007,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1587,
+								1587
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 504.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "professionals/professsionals.service.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1446,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								931,
+								931
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "common/app.route.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2553,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								962,
+								962
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 168.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -903,7 +1170,7 @@
 		"height": 0.0
 	},
 	"pinned_build_system": "",
-	"project": "professional.sublime-project",
+	"project": "app.sublime.sublime-project",
 	"replace":
 	{
 		"height": 42.0

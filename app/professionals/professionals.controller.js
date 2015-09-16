@@ -50,9 +50,11 @@
         // viewModel.professionals = angular.copy(professionals);
         // viewModel.professionals = angular.copy(viewModel.professionals);
         // console.log("viewmodel.Professional: - " + viewModel.professionals);
+
         viewModel.maxSize = 4;
         viewModel.pageSize = pageSize();
         viewModel.currentPage = page();
+        
         // viewModel.total = getTotalProfissional();
 
 

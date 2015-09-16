@@ -1,0 +1,12 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+			"folder_exclude_patterns": ["bower_components", "node_modules", "test"],
+			"file_exclude_patterns": ["*.css", ".bo*",  ".yo*", ".trav*", ".jsh*", ".edit*", ".git*"],
+            "follow_symlinks": true
+
+		}
+	]
+}

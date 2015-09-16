@@ -1,12 +1,44 @@
-# todo-list-app
+# Simples Profissional 
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
+
+Projeto gerado com [yo angular generator](https://github.com/yeoman/generator-angular)
 version 0.12.1.
+
+Para processo seletivo SIMPLES DENTAL
+
+## Conteúdo
+
+- [Restangular](#restangular)
+- [Tecnologias](#Tecnologias)
+- [John Papa Style Guid](#John-Papa-Style-Guid)
+- [Lodash](#Lodash)
+- [Restangular](#restangular)
+- [Restangular](#restangular)
+- [Restangular](#restangular)
+- [Restangular](#restangular)
+
+## Tecnologias
+
+
 
 ## Build & development
 
-Run `grunt` for building and `grunt serve` for preview.
+Execute o comando `grunt` para building e `grunt serve` para visualizar a aplicação.
 
 ## Testing
 
-Running `grunt test` will run the unit tests with karma.
+Executando `grunt test` ira rodar os testes unitárioas com o Karma.
+
+* Não disponível nessa versão.
+
+## Exemplos
+
+
+#restangular
+
+````javascript
+
+
+````
+
+#restangular
