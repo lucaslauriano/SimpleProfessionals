@@ -12,13 +12,6 @@ Para processo seletivo SIMPLES DENTAL
 - [Tecnologias](#Tecnologias)
 - [John Papa Style Guid](#John-Papa-Style-Guid)
 - [Lodash](#Lodash)
-- [Restangular](#restangular)
-- [Restangular](#restangular)
-- [Restangular](#restangular)
-- [Restangular](#restangular)
-
-
-
 
 ## Build & development
 
