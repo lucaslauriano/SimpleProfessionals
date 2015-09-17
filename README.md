@@ -8,7 +8,7 @@ Para processo seletivo SIMPLES DENTAL
 
 ## Conteúdo
 
-- [Restangular](#restangular)
+- [Restangular](#Restangular)
 - [Tecnologias](#Tecnologias)
 - [John Papa Style Guid](#John-Papa-Style-Guid)
 - [Lodash](#Lodash)
@@ -17,7 +17,6 @@ Para processo seletivo SIMPLES DENTAL
 - [Restangular](#restangular)
 - [Restangular](#restangular)
 
-## Tecnologias
 
 
 
@@ -25,16 +24,20 @@ Para processo seletivo SIMPLES DENTAL
 
 Execute o comando `grunt` para building e `grunt serve` para visualizar a aplicação.
 
-## Testing
+#Testing
 
 Executando `grunt test` ira rodar os testes unitárioas com o Karma.
 
 * Não disponível nessa versão.
 
-## Exemplos
 
 
-#restangular
+#Tecnologias
+
+#Exemplos
+
+
+#Restangular
 
 ````javascript
 
