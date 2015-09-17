@@ -32,6 +32,8 @@ Executando `grunt test` ira rodar os testes unitárioas com o Karma.
 ````
 ## John Papa Style Guid
 
+ [![Angular Patterns: Clean Code](https://raw.githubusercontent.com/johnpapa/angular-styleguide/master/assets/ng-clean-code-banner.png)](http://jpapa.me/ngclean)
+
 ## Lodash
 
-## Anagular Bootstrap
+## Angular Bootstrap
