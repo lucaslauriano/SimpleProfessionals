@@ -19,6 +19,7 @@
         var Restangular = $injector.get('Restangular');
 
         var PublicMethods = {
+            customGet: _customGet,
             get: _get,
             getList: _getList,
             deletar: _deletar,
@@ -32,9 +33,14 @@
         function init() {
         }
 
-        function _get(id, _q) {
-            return Restangular.one('professionals', id).customGET("professionals", {q: _q});
+        function _customGet(id, _q) {
+            return Restangular.one('professionals', id).customGET("professional", {q: _q});
         }
+
+        function _get(id) {
+            return Restangular.one('professionals').get();
+        }
+
 
         function _getList(_page, _pageSize) {
             return Restangular.all('professionals').customGETLIST("", {page: _page, pageSize: _pageSize});
@@ -43,7 +49,7 @@
         function _salvar(professional) {
             return !professional.id ?
                 Restangular.all('professionals').post(professional) :
-                Restangular.one('professionals').customPUT(professional, professional.id);
+                Restangular.one('professionals').customPUT("professional", professional.id);
         }
 
         function _deletar(idProfessional) {
