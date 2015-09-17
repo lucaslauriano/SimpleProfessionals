@@ -7,31 +7,31 @@ version 0.12.1.
 Para processo seletivo SIMPLES DENTAL
 
 ## Conteudo
-- [Build & development](#Build-&-development)
-- [Testing](#Testing)
-- [Restangular](#Restangular)
-- [John Papa Style Guid](#John-Papa-Style-Guid)
-- [Lodash](#Lodash)
-- [Angular Bootstrap](#Angular-Bootstrap)
+- [Build & development](#build-&-development)
+- [Testing](#testing)
+- [Restangular](#restangular)
+- [John Papa Style Guid](#john-papa-style-guid)
+- [Lodash](#lodash)
+- [Angular Bootstrap](#angular-bootstrap)
 
-# Build & development
+## Build & development
 
 Execute o comando `grunt` para building e `grunt serve` para visualizar a aplicação.
 
-#Testing
+## Testing
 
 Executando `grunt test` ira rodar os testes unitárioas com o Karma.
 
 * Não disponível nessa versão.
 
-#Restangular
+## Restangular
 
 ````javascript
 
 
 ````
-#John Papa Style Guid
+## John Papa Style Guid
 
-#Lodash
+## Lodash
 
-#Anagular Bootstrap
+## Anagular Bootstrap
