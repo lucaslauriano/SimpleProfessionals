@@ -6,7 +6,7 @@ version 0.12.1.
 
 Para processo seletivo SIMPLES DENTAL
 
-## Conteúdo
+## Tecnologias
 
 - [Restangular](#Restangular)
 - [Tecnologias](#Tecnologias)
@@ -23,18 +23,11 @@ Executando `grunt test` ira rodar os testes unitárioas com o Karma.
 
 * Não disponível nessa versão.
 
-
-
-#Tecnologias
-
 #Exemplos
 
-
-#Restangular
+*#Restangular
 
 ````javascript
 
 
 ````
-
-#restangular
