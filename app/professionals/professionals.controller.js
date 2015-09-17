@@ -5,17 +5,19 @@
         .controller('app.professionals.ProfessionalsCtrl', ProfessionalsCtrl);
 
     ProfessionalsCtrl.$inject = [
-        '$injector'
+        '$injector',
+        '$modal'
     ];
 
-    function ProfessionalsCtrl($injector) {
+    function ProfessionalsCtrl($injector, $modal) {
         var viewModel = this;
 
         var ProfessionalService = $injector.get('app.professionals.ProfessionalService');
 
         var PublicProparties = {
             deletar: _deletar,
-            getTotalProfessionals: _getTotalProfessionals
+            getTotalProfessionals: _getTotalProfessionals,
+            openModalEdit: _openModalEdit
         };
 
         _.extend(viewModel, PublicProparties);
@@ -23,9 +25,6 @@
         init();
 
         function init() {
-
-
-
             var professionals;
 
             ProfessionalService.getList(page(), pageSize()).then(function(professionals) {
@@ -41,37 +40,10 @@
 
         }
 
-
-
-        console.log("viewmodel: - " + viewModel);
-
-
-        // viewModel.professionals.isLast = angular.copy(professionals.isLast);
-        // viewModel.professionals = angular.copy(professionals);
-        // viewModel.professionals = angular.copy(viewModel.professionals);
-        // console.log("viewmodel.Professional: - " + viewModel.professionals);
-
         viewModel.maxSize = 4;
         viewModel.pageSize = pageSize();
         viewModel.currentPage = page();
         
-        // viewModel.total = getTotalProfissional();
-
-
-        // console.log("pageSize " + viewModel.professionals.pageSize);
-        // console.log("maxSize " +  viewModel.professionals.maxSize);
-        // console.log("currentPage " + viewModel.professionals.currentPage);
-        // console.log("isLast " + viewModel.isLast);
-
-        // viewModel.filteredTodos = [];
-
-        // viewModel.$watch('currentPage + numPerPage', function() {
-        //     var begin = ((viewModel.page() - 1) * viewModel.pageSize()),
-        //         end = begin + viewModel.pageSize();
-
-        //    viewModel.filteredTodos = viewModel.professionals.slice(begin, end);
-        // });
-
         function page() {
             return 1;
         }
@@ -96,6 +68,19 @@
                     return idProfessional === professional._id;
                 });
             }
+        }
+
+        function _openModalEdit(idProfessional) {
+            $modal.open({
+                templateUrl: 'professionals/professionals.modalEdit.html',
+                controller: 'app.professionals.ProfessionalModalCtrl',
+                controllerAs: 'ProfessionalModalCtrl',
+                resolve: {
+                    id: function() {
+                        return idProfessional;
+                    }
+                }
+            });
         }
     }
 })();

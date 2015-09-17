@@ -59,11 +59,11 @@
                             {{professional.cpf}}
                         </td>
                         <td>
-                            {{professional.phone}} {{professional.isLast}}
+                            {{professional.phone}}
                         </td>
                         <td align="center">
                             <div class="btn-group">
-                                <a href="#/editProfessional/{{professional._id}}"
+                                <a data-ng-click="ProfessionalsCtrl.openModalEdit(professional._id)"
                                    popover="Editar"
                                    popover-trigger="mouseenter"
                                    class="btn btn-default btn-sm">
