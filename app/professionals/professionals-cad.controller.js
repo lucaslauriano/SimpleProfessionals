@@ -35,11 +35,11 @@
         init();
 
         function init() {
-
+             viewModel.professional = angular.copy(professional);
         }
 
         function isClean() {
-            return angular.equals(professional, viewModel.data);
+            return angular.equals(professional, viewModel.professional);
         }
 
         function isInvalid() {
@@ -56,7 +56,6 @@
 
         function _deletar() {
             return ProfessionalService.deletar(viewModel.professional.id).then(function() {
-                console.log("deleta");
                 goToListarProfessionals();
             });
         }

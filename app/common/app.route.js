@@ -30,13 +30,13 @@
                 controllerAs: 'ProfessionalsCtrl'
             })
             .state('editProfessional', {
-                url: '/editProfessional:professionalId',
+                url: '/editProfessional/:professionalId',
                 templateUrl: '../professionals/professionals.cad.html',
-                controller: 'app.professionals.ProfessionalsCtrl',
-                controllerAs: 'ProfessionalsCtrl',
+                controller: 'app.professionals.ProfessionalCadCtrl',
+                controllerAs: 'ProfessionalCadCtrl',
                 resolve: {
                     professional: function(Restangular, $stateParams) {
-                        return Restangular.one('professionals', $stateParams.rofessionalId).get();
+                        return Restangular.one('professionals', $stateParams.professionalId).get();
                     }
                 }
             })

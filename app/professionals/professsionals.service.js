@@ -33,7 +33,7 @@
         }
 
         function _get(id, _q) {
-            return Restangular.one('professionals', id).customGET("professionals", {q: _q});
+            return Restangular.one('professionals', id).customGET();
         }
 
         function _getList(_page, _pageSize) {
