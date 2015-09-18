@@ -28,28 +28,23 @@
 
         return PublicMethods;
 
-        init();
-
-        function init() {
-        }
-
-        function _customGet(id, _q) {
-            return Restangular.one('professionals', id).customGET("professional", {q: _q});
-        }
-
         function _get(id) {
-            return Restangular.one('professionals').get();
+            return Restangular.one('professionals', id).get();
         }
-
 
         function _getList(_page, _pageSize) {
             return Restangular.all('professionals').customGETLIST("", {page: _page, pageSize: _pageSize});
         }
 
+        function _customGet(id, _q) {
+            return Restangular.one('professionals', id).customGET("", {q: _q});
+        }
+
+
         function _salvar(professional) {
-            return !professional.id ?
+            return !professional._id?
                 Restangular.all('professionals').post(professional) :
-                Restangular.one('professionals').customPUT("professional", professional.id);
+                Restangular.one('professionals').customPUT(professional, professional._id);
         }
 
         function _deletar(idProfessional) {

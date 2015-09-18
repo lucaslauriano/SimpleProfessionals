@@ -1,6 +1,14 @@
 (function() {
     'use strict';
 
+    /**
+     * @ngdoc function
+     * @name app.professionals:ProfessionalsCtrl
+     * @description
+     * # ProfessionalsCtrl
+     * Modal Controller de app.professionals
+     */
+
     angular.module('app.professionals')
         .controller('app.professionals.ProfessionalsCtrl', ProfessionalsCtrl);
 
@@ -11,9 +19,7 @@
 
     function ProfessionalsCtrl($injector, $modal) {
         var viewModel = this;
-
         var ProfessionalService = $injector.get('app.professionals.ProfessionalService');
-
         var PublicProparties = {
             deletar: _deletar,
             getTotalProfessionals: _getTotalProfessionals,
@@ -25,25 +31,17 @@
         init();
 
         function init() {
-            var professionals;
-
             ProfessionalService.getList(page(), pageSize()).then(function(professionals) {
                 viewModel.professionals = professionals;
                 viewModel.professionals.isLast = professionals.isLast;
-
-                console.log("VIEW MODEL: " + viewModel.professionals);
-                console.log("VIEW MODEL is Last: " + viewModel.professionals.isLast);
-
             });
-
-            professionals = viewModel.professionals;
-
         }
 
         viewModel.maxSize = 4;
         viewModel.pageSize = pageSize();
         viewModel.currentPage = page();
-        
+
+
         function page() {
             return 1;
         }
@@ -55,8 +53,6 @@
         function _getTotalProfessionals() {
             return viewModel.professionals && viewModel.professionals.length;
         }
-
-        console.log(_getTotalProfessionals());
 
         function _deletar(idProfessional) {
             ProfessionalService.deletar(idProfessional).then(function() {

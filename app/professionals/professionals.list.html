@@ -82,22 +82,15 @@
             </table>
         </div>
         <div class="panel-footer">
-<!--             <pagination 
-              total-items="ProfessionalsCtrl.n" 
+            <pagination 
+              total-items="ProfessionalsCtrl.length" 
               items-per-page="ProfessionalsCtrl.pageSize"
               ng-model="ProfessionalsCtrl.currentPage" 
               max-size="ProfessionalsCtrl.maxSize"
-              rotate="true"
+              ng-disabled="false"
               class="pagination-sm" 
               >
-            </pagination> -->
-             <a 
-                 popover="Editar"
-                 popover-trigger="mouseenter"
-                 class="btn btn-default btn-sm"
-                 data-ng-click="ProfessionalsCtrl.getIsLast()">
-              <i class="btn-small glyphicon glyphicon-edit"></i>
-              </a>
+            </pagination>
         </div>
     </div>
 </div>
