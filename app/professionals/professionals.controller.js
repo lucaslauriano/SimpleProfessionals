@@ -14,10 +14,11 @@
 
     ProfessionalsCtrl.$inject = [
         '$injector',
-        '$modal'
+        '$log',
+        '$modal',
     ];
 
-    function ProfessionalsCtrl($injector, $modal) {
+    function ProfessionalsCtrl($injector, $log, $modal) {
         var viewModel = this;
         var ProfessionalService = $injector.get('app.professionals.ProfessionalService');
         var PublicProparties = {
@@ -31,28 +32,57 @@
         init();
 
         function init() {
+
             ProfessionalService.getList(page(), pageSize()).then(function(professionals) {
                 viewModel.professionals = professionals;
                 viewModel.professionals.isLast = professionals.isLast;
             });
+
+            ProfessionalService.customGET().then(function(professional) {
+                viewModel.professional = _.first(professional.data);
+            });
         }
 
-        viewModel.maxSize = 4;
-        viewModel.pageSize = pageSize();
         viewModel.currentPage = page();
+        viewModel.maxSize = 5; //Limita o numero da paginação.
+        viewModel.total = 647;
+        viewModel.numPerPage = pageSize();
+        viewModel.filteredTodos = [];
 
+         // viewModel.$watch('currentPage + numPerPage', updateFilteredItems);
+
+        function updateFilteredItems() {
+
+            var begin = ((viewModel.currentPage - 1) * viewModel.numPerPage),
+                end = begin + viewModel.numPerPage;
+
+            viewModel.filteredTodos = viewModel.professionals.slice(begin, end);
+        }
+
+        $log.log(viewModel.numPerPage,  viewModel.maxSize,  viewModel.total, viewModel.numPerPage, viewModel.filteredTodos );
+
+        function getTotal() {
+            return viewModel.total = _.slice(viewModel.professionals);
+        }
+
+   
 
         function page() {
             return 1;
         }
 
         function pageSize() {
-            return 8;
+            return 4;
+        }
+
+        function _q() {
+
         }
 
         function _getTotalProfessionals() {
             return viewModel.professionals && viewModel.professionals.length;
         }
+
 
         function _deletar(idProfessional) {
             ProfessionalService.deletar(idProfessional).then(function() {
@@ -65,6 +95,7 @@
                 });
             }
         }
+
 
         function _openModalEdit(idProfessional) {
             $modal.open({

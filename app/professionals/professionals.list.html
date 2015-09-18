@@ -7,7 +7,7 @@
         <div class="panel-heading">
             <div class="row">
                 <div class="col-md-6">
-                    <h4>Profissionais</h4>
+                    <h4>Profissionais</h4>{{ProfessionalsCtrl}}
                 </div>
                 <div class="col-md-3 col-md-offset-3">
                     <form action="" class="search-form">
@@ -83,10 +83,17 @@
         </div>
         <div class="panel-footer">
             <pagination 
-              total-items="ProfessionalsCtrl.length" 
-              items-per-page="ProfessionalsCtrl.pageSize"
+              total-items="ProfessionalsCtrl.total" 
+              items-per-page="ProfessionalsCtrl.numPerPage"
               ng-model="ProfessionalsCtrl.currentPage" 
               max-size="ProfessionalsCtrl.maxSize"
+
+              previous-text="Anterior"
+              next-text="Próximo"
+              first-text="Inicio"
+              last-text="Fim"
+
+              boundary-links="true"
               ng-disabled="false"
               class="pagination-sm" 
               >

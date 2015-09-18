@@ -19,7 +19,7 @@
         var Restangular = $injector.get('Restangular');
 
         var PublicMethods = {
-            customGet: _customGet,
+            customGET: _customGET,
             get: _get,
             getList: _getList,
             deletar: _deletar,
@@ -36,7 +36,7 @@
             return Restangular.all('professionals').customGETLIST("", {page: _page, pageSize: _pageSize});
         }
 
-        function _customGet(id, _q) {
+        function _customGET(id, _q) {
             return Restangular.one('professionals', id).customGET("", {q: _q});
         }
 

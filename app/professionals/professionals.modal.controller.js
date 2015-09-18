@@ -16,11 +16,12 @@
     ProfessionalModalCtrl.$inject = [
         '$injector',
         '$modalInstance',
+        '$rootScope',
         '$location',
         'id'
     ];
 
-    function ProfessionalModalCtrl($injector, $modalInstance, $location, id) {
+    function ProfessionalModalCtrl($injector, $modalInstance, $rootScope, $location, id) {
 
         var ProfessionalService = $injector.get('app.professionals.ProfessionalService');
 
@@ -38,29 +39,10 @@
         init();
 
         function init() {
-            ProfessionalService.customGet(id).then(function(professional) {
-                viewModel.professional = professional;
-
-                console.log(viewModel.professional);
+            ProfessionalService.get(id).then(function(professional) {
+                viewModel.professional = _.first(professional.data);
             });
-            
-             console.log(viewModel.professional)
-
-
-
         }
-
-         console.log(viewModel.professional)
-
-        // function getEmail(){
-        //     return  viewModel.professional.email = angular.copy(professional.email);
-
-        //     console.log(viewModel.professional.email);
-        // }
-
-        // function isClean() {
-        //     return angular.equals(professional.email, viewModel.professional.email);
-        // }
 
         function isInvalid() {
             return viewModel.listDetail.$invalid;
@@ -72,6 +54,10 @@
 
         function _cancel() {
             $modalInstance.dismiss('cancel');
+        }
+
+        function watchController(){
+            $rootScope.$broadcast('BOOM!', viewModel.professional.email)
         }
 
         function _isSalvarDisabled() {
@@ -86,9 +72,10 @@
         }
 
         function _salvar() {
-            console.log('salvar');
             return ProfessionalService.salvar(viewModel.professional).then(function() {
-                goToListarProfessionals();
+                $modalInstance.close();
+            }).then(function() {
+                watchController();
             });
         }
     }
