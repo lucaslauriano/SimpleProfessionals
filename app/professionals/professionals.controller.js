@@ -44,7 +44,7 @@
         }
 
         viewModel.currentPage = page();
-        viewModel.maxSize = 5; //Limita o numero da paginação.
+        viewModel.maxSize = 3; //Limita o numero da paginação.
         viewModel.total = 647;
         viewModel.numPerPage = pageSize();
         viewModel.filteredTodos = [];
@@ -72,7 +72,7 @@
         }
 
         function pageSize() {
-            return 4;
+            return 5;
         }
 
         function _q() {
