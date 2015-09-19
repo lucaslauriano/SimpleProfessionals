@@ -7,19 +7,23 @@
         <div class="panel-heading">
             <div class="row">
                 <div class="col-md-6">
-                    <h4>Profissionais</h4>{{ProfessionalsCtrl}}
+                    <h4>Profissionais</h4>
                 </div>
                 <div class="col-md-3 col-md-offset-3">
                     <form action="" class="search-form">
                         <div class="form-group has-feedback">
-                            <label for="search" class="sr-only">Search</label>
+                            <label for="ProfessionalsCtrl.q" class="sr-only"></label>
                             <input type="text"
                                    class="form-control"
-                                   name="search"
-                                   id="search"
+                                   name="ProfessionalsCtrl.q"
+                                   
                                    placeholder="Buscar"
-                                   data-ng-model="search">
-                            <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                                   data-ng-model="ProfessionalsCtrl.q">
+                           
+                        <a data-ng-click="ProfessionalsCtrl.getSearch(ProfessionalsCtrl.q)"
+                           class="btn btn-default btn-sm">
+                          <i class="glyphicon glyphicon-search"></i>
+                        </a>
                         </div>
                     </form>
                 </div>
@@ -47,12 +51,12 @@
                     </tr>
                 </tfoot>
                 <tbody>
-                    <tr data-ng-repeat="professional in ProfessionalsCtrl.professionals | filter:search | filter:searchText track by professional._id"
-                        data-ng-show="professional._id">
+                    <tr data-ng-repeat="professional in ProfessionalsCtrl.professionals"
+                        >
                         
                         <td>{{professional.name}}
                         </td>
-                        <td>
+                        <td >
                             {{professional.email}}
                         </td>
                         <td>
@@ -83,21 +87,23 @@
         </div>
         <div class="panel-footer">
             <pagination 
-              total-items="ProfessionalsCtrl.total" 
-              items-per-page="ProfessionalsCtrl.numPerPage"
-              ng-model="ProfessionalsCtrl.currentPage" 
-              max-size="ProfessionalsCtrl.maxSize"
+
+              data-total-items="ProfessionalsCtrl.total" 
+
+              data-items-per-page="ProfessionalsCtrl.numPerPage"
+
+              data-ng-model="ProfessionalsCtrl.currentPage"
+
+              data-max-size="ProfessionalsCtrl.maxSize"
+
+              data-num-pages="ProfessionalsCtrl.numPages"
 
               previous-text="Anterior"
               next-text="Próximo"
-              first-text="Inicio"
-              last-text="Fim"
 
-              boundary-links="true"
               ng-disabled="false"
               class="pagination-sm" 
-              >
-            </pagination>
+              ></pagination>
         </div>
     </div>
 </div>

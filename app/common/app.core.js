@@ -19,6 +19,7 @@
             'ngSanitize',
             'ngTouch',
             'restangular',
-            'ui.bootstrap'
+            'ui.bootstrap',
+            'ngMask'
         ]);
 })();

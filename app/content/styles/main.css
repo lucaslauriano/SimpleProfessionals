@@ -1,7 +1,3 @@
-/* #DEE6FA - Cor Fraca
-   #D1DBF5 - Cor Forte
-*/
-
 /*Boddy Content*/
 body {
     padding-top: 70px;
@@ -46,7 +42,7 @@ a:focus {
 .panel-default > .panel-heading {
     background-color: #D3DEE8;
     border-color: #777;
-    padding: 10px;
+    padding: 20px;
 }
 
 .panel-footer {
@@ -150,7 +146,7 @@ a:focus {
 .pagination > .active > span:hover,
 .pagination > .active > a:focus,
 .pagination > .active > span:focus {
-    background-color: #CDE0E7;
+    background-color: #C1D0DD;
     color: #333;
     border-color: #555;
 }
@@ -164,6 +160,21 @@ a:focus {
     color: #777;
     background-color: #F5F4F9;
     border-color: #555;
+}
+
+.pagination > li > a, .pagination > li > span {
+    border: 1px solid #555;
+    color:#555;
+}
+
+.pagination > li > a:hover, 
+.pagination > li > span:hover, 
+.pagination > li > a:focus, 
+.pagination > li > span:focus {
+    z-index: 3;
+    color: #333;
+    background-color: #CDE0E7;
+    border-color: #333;
 }
 
 /* search */
@@ -225,15 +236,6 @@ a:focus {
     font-size: 14px;
 }
 
-/* list-group */
-.list-group-item {
-  position: relative;
-  display: block;
-  padding: 10px 15px;
-  margin-bottom: -1px;
-  background-color: rgba(214, 230, 239, 0.17);
-  border: 1px solid #C1D0DD;
-}
 
 /* table */
 .table-bordered > thead > tr > th,
@@ -264,21 +266,9 @@ tfoot > tr > td {
 
  }
 
- .table > thead > tr > th {
+.table > thead > tr > th {
   vertical-align: bottom;
   background-color: #E5ECF7;
-}
-
-
-
-#lista-compras td,
-#lista-compras th .hover {
-    text-align: center;
-}
-
-.isBuy-true {
-    text-decoration: line-through;
-    color: red;
 }
 
 /* modal-content */

@@ -29,17 +29,6 @@
                 controller: 'app.professionals.ProfessionalsCtrl',
                 controllerAs: 'ProfessionalsCtrl'
             })
-/*            .state('editProfessional', {
-                url: '/editProfessional/:idProfessional',
-                templateUrl: '../professionals/professionals.cad.html',
-                controller: 'app.professionals.ProfessionalCadCtrl',
-                controllerAs: 'ProfessionalCadCtrl',
-                resolve: {
-                    professional: function(Restangular, $stateParams) {
-                        return Restangular.one('professionals', $stateParams.idProfessional).get();
-                    }
-                }
-            })*/
             .state('newProfessional', {
                 url: '/newProfessional',
                 templateUrl: '../professionals/professionals.cad.html',

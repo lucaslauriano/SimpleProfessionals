@@ -20,10 +20,13 @@
 
     function ProfessionalsCtrl($injector, $log, $modal) {
         var viewModel = this;
+
         var ProfessionalService = $injector.get('app.professionals.ProfessionalService');
         var PublicProparties = {
             deletar: _deletar,
+            getSearch: _getSearch,
             getTotalProfessionals: _getTotalProfessionals,
+            numPages: _numPages,
             openModalEdit: _openModalEdit
         };
 
@@ -32,56 +35,47 @@
         init();
 
         function init() {
-
             ProfessionalService.getList(page(), pageSize()).then(function(professionals) {
                 viewModel.professionals = professionals;
                 viewModel.professionals.isLast = professionals.isLast;
             });
+        } 
 
-            ProfessionalService.customGET().then(function(professional) {
-                viewModel.professional = _.first(professional.data);
-            });
-        }
 
-        viewModel.currentPage = page();
-        viewModel.maxSize = 3; //Limita o numero da paginação.
-        viewModel.total = 647;
-        viewModel.numPerPage = pageSize();
+        viewModel.currentPage = page(); // Pagina Atual.
+        viewModel.maxSize = 3; // Limita o numero da paginação.
+        viewModel.totalItems = getTotal(); // total-items.
+        viewModel.numPerPage = pageSize(); // Total de profissionais por páginas.
         viewModel.filteredTodos = [];
 
-         // viewModel.$watch('currentPage + numPerPage', updateFilteredItems);
 
-        function updateFilteredItems() {
-
-            var begin = ((viewModel.currentPage - 1) * viewModel.numPerPage),
-                end = begin + viewModel.numPerPage;
-
-            viewModel.filteredTodos = viewModel.professionals.slice(begin, end);
+        function _numPages() {
+            return Math.ceil(viewModel.professionals.length / viewModel.numPerPage);
         }
-
-        $log.log(viewModel.numPerPage,  viewModel.maxSize,  viewModel.total, viewModel.numPerPage, viewModel.filteredTodos );
-
-        function getTotal() {
-            return viewModel.total = _.slice(viewModel.professionals);
-        }
-
-   
 
         function page() {
             return 1;
         }
 
         function pageSize() {
-            return 5;
+            return 20;
         }
 
-        function _q() {
-
+        function getTotal() {
+            return;
         }
 
         function _getTotalProfessionals() {
             return viewModel.professionals && viewModel.professionals.length;
         }
+
+        function _getSearch(search) {
+           ProfessionalService.getList(page(), pageSize(), search).then(function(professionals) {
+               viewModel.professionals = professionals;
+           });
+
+           return viewModel.professionals;
+       }
 
 
         function _deletar(idProfessional) {
@@ -96,7 +90,6 @@
             }
         }
 
-
         function _openModalEdit(idProfessional) {
             $modal.open({
                 templateUrl: 'professionals/professionals.modalEdit.html',
@@ -109,5 +102,6 @@
                 }
             });
         }
+
     }
 })();

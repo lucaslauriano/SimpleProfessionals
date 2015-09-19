@@ -13,6 +13,7 @@
     "angular-ui-router": "~0.2.15",
     "bootstrap": "^3.2.0",
     "lodash": "~3.10.1",
+    "ngMask": "angular-mask#~3.0.16",
     "restangular": "~1.5.1"
   },
   "devDependencies": {

@@ -32,12 +32,12 @@
             return Restangular.one('professionals', id).get();
         }
 
-        function _getList(_page, _pageSize) {
-            return Restangular.all('professionals').customGETLIST("", {page: _page, pageSize: _pageSize});
+        function _getList(_page, _pageSize, _q) {
+            return Restangular.all('professionals').customGETLIST("", {page: _page, pageSize: _pageSize, q: _q});
         }
 
-        function _customGET(id, _q) {
-            return Restangular.one('professionals', id).customGET("", {q: _q});
+        function _customGET(_q) {
+            return Restangular.one('professionals').customGET("", {q: _q});
         }
 
 
