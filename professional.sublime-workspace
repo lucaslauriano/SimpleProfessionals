@@ -404,61 +404,11 @@
 	"buffers":
 	[
 		{
-			"file": "app/professionals/professionals.controller.js",
+			"file": "db.json",
 			"settings":
 			{
-				"buffer_size": 3110,
+				"buffer_size": 1030,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/professionals/professionals-cad.controller.js",
-			"settings":
-			{
-				"buffer_size": 1976,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/professionals/professsionals.service.js",
-			"settings":
-			{
-				"buffer_size": 1527,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "Searching 7 files for \"veg\" (case sensitive)\n\n0 matches",
-			"settings":
-			{
-				"buffer_size": 55,
-				"line_ending": "Windows",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
-			"file": "app/professionals/professionals.list.html",
-			"settings":
-			{
-				"buffer_size": 4384,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/content/styles/main.css",
-			"settings":
-			{
-				"buffer_size": 5275,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/professionals/professionals.cad.html",
-			"settings":
-			{
-				"buffer_size": 4810,
-				"line_ending": "Unix"
 			}
 		}
 	],
@@ -469,10 +419,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 400.0,
-		"last_filter": "set ht",
+		"height": 141.0,
+		"last_filter": "set json",
 		"selected_items":
 		[
+			[
+				"set json",
+				"Set Syntax: JSON"
+			],
 			[
 				"set ht",
 				"Set Syntax: HTML"
@@ -546,7 +500,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 520.0
+		"width": 408.0
 	},
 	"console":
 	{
@@ -578,18 +532,18 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.cad.html",
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/content/styles/main.css",
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.list.html",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professsionals.service.js",
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.controller.js",
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals-cad.controller.js",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/common/app.core.js",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/index.html",
-		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/content/styles/main.css",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/common/app.route.js",
-		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.cad.html",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/professional.sublime-project",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.modalEdit.html",
-		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals-cad.controller.js",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.modal.controller.js",
-		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.controller.js",
-		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.list.html",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/README.md",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/main/dashboard.html",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/app.js",
@@ -929,222 +883,35 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/professionals/professionals.controller.js",
+					"file": "db.json",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3110,
+						"buffer_size": 1030,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2896,
-								2917
+								687,
+								687
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 704.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/professionals/professionals-cad.controller.js",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 1976,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1863,
-								1875
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": -0.0,
-						"translation.y": 273.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/professionals/professsionals.service.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1527,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1109,
-								1115
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 55,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								55,
-								55
-							]
-						],
-						"settings":
-						{
-							"default_dir": "C:\\Users\\Lucas\\Documents\\Projetos\\ProfessionalsCRUD",
-							"detect_indentation": false,
-							"line_numbers": false,
-							"output_tag": 1,
-							"result_base_dir": "",
-							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/professionals/professionals.list.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4384,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1308,
-								1308
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/content/styles/main.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5275,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								677,
-								677
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": -0.0,
-						"translation.y": 624.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app/professionals/professionals.cad.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4810,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2107,
-								2107
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -1275,7 +1042,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 349.0,
+	"side_bar_width": 342.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

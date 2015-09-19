@@ -54,11 +54,11 @@
         }
 
         function page() {
-            return 1;
+            return 3;
         }
 
         function pageSize() {
-            return 20;
+            return 2;
         }
 
         function getTotal() {
