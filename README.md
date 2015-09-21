@@ -22,7 +22,7 @@ Execute o comando `grunt` para building e `grunt serve` para visualizar a aplica
 
 Executando `grunt test` ira rodar os testes unitárioas com o Karma.
 
-* Não disponível nessa versão.
+* Não disponível para essa versão.
 
 ## Restangular
 

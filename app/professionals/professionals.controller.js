@@ -42,7 +42,6 @@
             ProfessionalService.getList(page(), pageSize()).then(function(professionals) {
                 viewModel.professionals = professionals;
                 viewModel.professionals.isLast = professionals.isLast;
-                $log.log("isLast", viewModel.professionals.isLast);
             });
         }
 
@@ -52,12 +51,20 @@
         }
 
         function page() {
-            return _nextPage();
+            return 1;
         }
 
         function pageSize() {
             return 5;
         }
+        
+        // function next(){
+        //     $log.log("NEXT");
+        //    if(viewModel.professionals.isLast !==true){
+        //     viewModel.currentPage++;
+        //    }
+        //    return viewModel.currentPage;
+        // }
 
         //## Public ##//
         function _deletar(idProfessional) {
@@ -71,28 +78,17 @@
                 });
             }
         }
+        
+        function _nextPage() {
+            // return next();
+        };
 
         function _prevPage() {
-            $log.log("Voce Clicou em anterior");
+            $log.log("Prev");
             if (viewModel.currentPage > 0) {
                 viewModel.currentPage--;
             }
         };
-
-        function next(){
-             $log.log("Voce Clicou em next");
-
-             if (viewModel.isLast !== true) {
-                viewModel.currentPage++;
-            }
-            return viewModel.currentPage;
-             $log.log("viewModel.currentPage? ", viewModel.currentPage);
-        }
-        function _nextPage() {
-            return next();
-        };
-
-        $log.log("Voce Clicou em anterior", next(), viewModel.currentPage);
 
         function _getSearch(search) {
             ProfessionalService.getList(page(), pageSize(), search).then(function(professionals) {
