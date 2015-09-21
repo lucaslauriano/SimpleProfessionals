@@ -22,7 +22,6 @@ a:focus {
 
 
 /* well */
-
 .well {
     background-color: #D3DEE8;
     border-color: #333;
@@ -30,7 +29,6 @@ a:focus {
 
 
 /* jumbotron */
-
 .jumbotron {
     background-color: #D3DEE8;
     border-color: #777;
@@ -38,7 +36,6 @@ a:focus {
 
 
 /* breadcrumb */
-
 .breadcrumb {
     background-color: #E5ECF7;
     border-color: #555;
@@ -46,7 +43,6 @@ a:focus {
 
 
 /* panel */
-
 .panel-default {
     border-color: #777;
     background-color: #F5F4F9;
@@ -68,7 +64,6 @@ a:focus {
 
 
 /* nav-bar */
-
 .nav > li > a:hover,
 .nav > li > a:focus {
     text-decoration: none;
@@ -131,7 +126,6 @@ a:focus {
 
 
 /* dropdown */
-
 .dropdown-menu {
     background-color: #E5ECF7;
 }
@@ -157,9 +151,7 @@ a:focus {
     background-color: #D3DEE8;
 }
 
-
 /* pagination */
-
 .pagination > .active > a,
 .pagination > .active > span,
 .pagination > .active > a:hover,
@@ -198,70 +190,7 @@ a:focus {
     border-color: #333;
 }
 
-
-/* search */
-
-.search-form .form-group {
-    float: right !important;
-    transition: all 0.35s, border-radius 0s;
-    width: 32px;
-    height: 32px;
-    background-color: #fff;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
-    border-radius: 25px;
-    border: 1px solid #ccc;
-}
-
-.search-form .form-group input.form-control {
-    padding-right: 20px;
-    border: 0 none;
-    background: transparent;
-    box-shadow: none;
-    display: block;
-}
-
-.search-form .form-group input.form-control::-webkit-input-placeholder {
-    display: none;
-}
-
-.search-form .form-group input.form-control:-moz-placeholder {
-    /* Firefox 18- */
-    display: none;
-}
-
-.search-form .form-group input.form-control::-moz-placeholder {
-    /* Firefox 19+ */
-    display: none;
-}
-
-.search-form .form-group input.form-control:-ms-input-placeholder {
-    display: none;
-}
-
-.search-form .form-group:hover,
-.search-form .form-group.hover {
-    width: 100%;
-    border-radius: 4px 25px 25px 4px;
-}
-
-.search-form .form-group span.form-control-feedback {
-    position: absolute;
-    top: -1px;
-    right: -2px;
-    z-index: 2;
-    display: block;
-    width: 34px;
-    height: 34px;
-    line-height: 34px;
-    text-align: center;
-    color: #B5C5D4;
-    left: initial;
-    font-size: 14px;
-}
-
-
 /* table */
-
 .table-bordered > thead > tr > th,
 .table-bordered > tbody > tr > th,
 .table-bordered > tfoot > tr > th,
@@ -294,9 +223,7 @@ tfoot > tr > td {
     background-color: #E5ECF7;
 }
 
-
 /* modal-content */
-
 .modal-content {
     background-color: #F5F4F9;
 }

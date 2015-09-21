@@ -57,7 +57,7 @@
         function pageSize() {
             return 5;
         }
-        
+
         // function next(){
         //     $log.log("NEXT");
         //    if(viewModel.professionals.isLast !==true){
@@ -81,14 +81,14 @@
         
         function _nextPage() {
             // return next();
-        };
+        }
 
         function _prevPage() {
-            $log.log("Prev");
+/*            $log.log("Prev");
             if (viewModel.currentPage > 0) {
                 viewModel.currentPage--;
-            }
-        };
+            }*/
+        }
 
         function _getSearch(search) {
             ProfessionalService.getList(page(), pageSize(), search).then(function(professionals) {

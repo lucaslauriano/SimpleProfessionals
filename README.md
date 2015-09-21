@@ -28,6 +28,21 @@ Executando `grunt test` ira rodar os testes unitárioas com o Karma.
 
 ````javascript
 
+  RestangularProvider.setBaseUrl('http://api.achronic.com');
+
+        RestangularProvider.addResponseInterceptor(function(professionals, operation, what, url, response, deferred) {
+
+            var extractedData;
+
+            if (operation === "getList") {
+                extractedData = professionals.data;
+                extractedData.isLast = professionals.isLast;
+
+            } else {
+                extractedData = professionals;
+            }
+            return extractedData;
+        });
 
 ````
 ## John Papa Style Guid
@@ -36,4 +51,8 @@ Executando `grunt test` ira rodar os testes unitárioas com o Karma.
 
 ## Lodash
 
+https://lodash.com/docs
+
 ## Angular Bootstrap
+
+https://angular-ui.github.io/
