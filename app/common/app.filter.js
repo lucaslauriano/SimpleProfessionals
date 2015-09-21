@@ -1,27 +1,28 @@
 (function() {
-	'use strict';
+    'use strict';
 
-	/**
-	 * @ngdoc function
-	 * @name app.professionals
-	 * @description
-	 * # NameConfiguration
-	 * Configuration of the app.professionals
-	 */
-	angular
-	  .module('app.professionals')
-	  .filter(filter);
+    /**
+     * @ngdoc function
+     * @name app.professionals
+     * @description
+     * # NameConfiguration
+     * Configuration of the app.professionals
+     */
+    angular
+        .module('app.filter', [])
+        .filter(filter);
 
-	NameConfiguration.$inject = ['dependencies'];
+    filter.$inject = [];
 
-	function NameConfiguration(dependencies) {
-		//content
-	}
+    function filter() {
+
+        init();
+
+        function init(input, start) {
+            start = parseInt(start, 10);
+
+            return input.slice(start);
+        }
+
+    }
 })();
-
-.filter('offset', function() {
-  return function(input, start) {
-    start = parseInt(start, 10);
-    return input.slice(start);
-  };
-});

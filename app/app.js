@@ -13,6 +13,7 @@
         .module('app', [
             'app.core',
             'app.route',
+            'app.filter',
             'app.professionals'
         ]);
 

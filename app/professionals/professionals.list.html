@@ -1,7 +1,7 @@
 <div class="row">
     <ol class="breadcrumb">
         <li><a href="#/">Home</a></li>
-        <li><a href="#/listProfessionals" class="active">Profissionais</a></li>
+        <li><a href="#/listProfessionals" class="active">Profissionais</a></li>{{ProfessionalsCtrl.professionals.isLast}}
     </ol>
     <div class="panel panel-default">
         <div class="panel-heading">
@@ -97,24 +97,34 @@
             </table>
         </div>
         <div class="panel-footer">
-            <pagination 
+        <nav>
+          <ul class="pager">
+            <li><a data-ng-click="ProfessionalsCtrl.prevPage()"
+                  type="button"
+                  class="btn btn-default btn-sm">
+                  Anterior
+                </a>
+            </li>
+            <li><a data-ng-click="ProfessionalsCtrl.nextPage()"
+                   type="button"
+                   class="btn btn-default btn-sm">
+                   Proximo
+                </a>
+            </li>
+          </ul>
+        </nav>
+          <!--   <pagination 
 
-              data-total-items="ProfessionalsCtrl.total" 
+              total-items="ProfessionalsCtrl.totalItens" 
+              
+              ng-model="ProfessionalsCtrl.currentPage"
 
-              data-items-per-page="ProfessionalsCtrl.numPerPage"
-
-              data-ng-model="ProfessionalsCtrl.currentPage"
-
-              data-max-size="ProfessionalsCtrl.maxSize"
-
-              data-num-pages="ProfessionalsCtrl.numPages"
-
+              
+              max-size="ProfessionalsCtrl.maxSize"
               previous-text="Anterior"
               next-text="Próximo"
-
-              ng-disabled="false"
               class="pagination-sm" 
-              ></pagination>
+              ></pagination> -->
         </td>
         </div>
     </div>

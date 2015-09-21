@@ -20,14 +20,14 @@
 
     function ProfessionalsCtrl($injector, $log, $modal) {
         var viewModel = this;
-
         var ProfessionalService = $injector.get('app.professionals.ProfessionalService');
         var PublicProperties = {
             deletar: _deletar,
             getSearch: _getSearch,
             getTotalProfessionals: _getTotalProfessionals,
-            numPages: _numPages,
+            nextPage: _nextPage,
             openModalEdit: _openModalEdit,
+            prevPage: _prevPage,
             refresh: _refresh
 
         };
@@ -36,42 +36,30 @@
 
         init();
 
+        viewModel.currentPage = 1;
+
         function init() {
             ProfessionalService.getList(page(), pageSize()).then(function(professionals) {
                 viewModel.professionals = professionals;
                 viewModel.professionals.isLast = professionals.isLast;
+                $log.log("isLast", viewModel.professionals.isLast);
             });
         }
 
-
-        viewModel.currentPage = page(); // Pagina Atual.
-        viewModel.maxSize = 3; // Limita o numero da paginação.
-        viewModel.totalItems = getTotal(); // total-items.
-        viewModel.numPerPage = pageSize(); // Total de profissionais por páginas.
-        viewModel.filteredTodos = [];
-
-
-        function _numPages() {
-            return Math.ceil(viewModel.professionals.length / viewModel.numPerPage);
+        //## Private ##//
+        function totalItens() {
+            return viewModel.professionals && viewModel.professionals.length;
         }
 
         function page() {
-            return 1;
+            return _nextPage();
         }
 
         function pageSize() {
-            return 20;
+            return 5;
         }
 
-        function getTotal() {
-            return;
-        }
-
-
-
-
-
-
+        //## Public ##//
         function _deletar(idProfessional) {
             ProfessionalService.deletar(idProfessional).then(function() {
                 removerView(idProfessional);
@@ -84,6 +72,28 @@
             }
         }
 
+        function _prevPage() {
+            $log.log("Voce Clicou em anterior");
+            if (viewModel.currentPage > 0) {
+                viewModel.currentPage--;
+            }
+        };
+
+        function next(){
+             $log.log("Voce Clicou em next");
+
+             if (viewModel.isLast !== true) {
+                viewModel.currentPage++;
+            }
+            return viewModel.currentPage;
+             $log.log("viewModel.currentPage? ", viewModel.currentPage);
+        }
+        function _nextPage() {
+            return next();
+        };
+
+        $log.log("Voce Clicou em anterior", next(), viewModel.currentPage);
+
         function _getSearch(search) {
             ProfessionalService.getList(page(), pageSize(), search).then(function(professionals) {
                 viewModel.professionals = professionals;
@@ -93,7 +103,7 @@
         }
 
         function _getTotalProfessionals() {
-            return viewModel.professionals && viewModel.professionals.length;
+            return totalItens();
         }
 
         function _openModalEdit(idProfessional) {
