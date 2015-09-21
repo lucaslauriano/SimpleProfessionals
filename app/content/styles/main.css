@@ -1,4 +1,5 @@
 /*Boddy Content*/
+
 body {
     padding-top: 70px;
     background-image: url("../images/background/10.jpg");
@@ -15,28 +16,40 @@ a:focus {
     color: #333;
 }
 
+.col-md-2 {
+    width: 21.66666667%;
+}
+
+
 /* well */
+
 .well {
     background-color: #D3DEE8;
     border-color: #333;
 }
 
+
 /* jumbotron */
+
 .jumbotron {
     background-color: #D3DEE8;
     border-color: #777;
 }
+
+
 /* breadcrumb */
+
 .breadcrumb {
     background-color: #E5ECF7;
     border-color: #555;
 }
 
+
 /* panel */
+
 .panel-default {
     border-color: #777;
     background-color: #F5F4F9;
-
 }
 
 .panel-default > .panel-heading {
@@ -53,7 +66,9 @@ a:focus {
     border-bottom-left-radius: 3px;
 }
 
+
 /* nav-bar */
+
 .nav > li > a:hover,
 .nav > li > a:focus {
     text-decoration: none;
@@ -114,32 +129,37 @@ a:focus {
     margin-left: 3.333333333333332%;
 }
 
+
 /* dropdown */
+
 .dropdown-menu {
     background-color: #E5ECF7;
 }
+
 .dropdown-menu .divider {
-  height: 1px;
-  margin: 9px 0;
-  overflow: hidden;
-  background-color: #555;
+    height: 1px;
+    margin: 9px 0;
+    overflow: hidden;
+    background-color: #555;
 }
 
 .dropdown-menu > li > a {
-  display: block;
-  padding: 3px 20px;
-  clear: both;
-  font-weight: normal;
-  line-height: 1.42857143;
-  color: #555;
-  white-space: nowrap;
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #555;
+    white-space: nowrap;
 }
 
 .dropdown-menu > li > a:hover {
     background-color: #D3DEE8;
 }
 
+
 /* pagination */
+
 .pagination > .active > a,
 .pagination > .active > span,
 .pagination > .active > a:hover,
@@ -162,14 +182,15 @@ a:focus {
     border-color: #555;
 }
 
-.pagination > li > a, .pagination > li > span {
+.pagination > li > a,
+.pagination > li > span {
     border: 1px solid #555;
-    color:#555;
+    color: #555;
 }
 
-.pagination > li > a:hover, 
-.pagination > li > span:hover, 
-.pagination > li > a:focus, 
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
 .pagination > li > span:focus {
     z-index: 3;
     color: #333;
@@ -177,7 +198,9 @@ a:focus {
     border-color: #333;
 }
 
+
 /* search */
+
 .search-form .form-group {
     float: right !important;
     transition: all 0.35s, border-radius 0s;
@@ -238,40 +261,42 @@ a:focus {
 
 
 /* table */
+
 .table-bordered > thead > tr > th,
 .table-bordered > tbody > tr > th,
 .table-bordered > tfoot > tr > th,
 .table-bordered > thead > tr > td,
 .table-bordered > tbody > tr > td,
 .table-bordered > tfoot > tr > td {
-  border: 1px solid #C1D0DD;
-  border-top: 1px solid #C1D0DD;
+    border: 1px solid #C1D0DD;
+    border-top: 1px solid #C1D0DD;
 }
 
 .table-bordered {
-  border: 1px solid #C1D0DD;
+    border: 1px solid #C1D0DD;
 }
 
 .table-striped > tbody > tr:nth-of-type(odd) {
-  background-color: #EEF1F7;
+    background-color: #EEF1F7;
 }
-*
-.table-hover > tbody > tr:hover {
-  background-color: #fff;
+
+* .table-hover > tbody > tr:hover {
+    background-color: #fff;
 }
 
 tfoot > tr > td {
- background-color: #E5ECF7;
- border: #333;
-
- }
-
-.table > thead > tr > th {
-  vertical-align: bottom;
-  background-color: #E5ECF7;
+    background-color: #E5ECF7;
+    border: #333;
 }
 
+.table > thead > tr > th {
+    vertical-align: bottom;
+    background-color: #E5ECF7;
+}
+
+
 /* modal-content */
+
 .modal-content {
-  background-color: #F5F4F9;
+    background-color: #F5F4F9;
 }

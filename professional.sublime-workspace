@@ -403,14 +403,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "db.json",
-			"settings":
-			{
-				"buffer_size": 1030,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -532,6 +524,7 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/db.json",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.cad.html",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/content/styles/main.css",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.list.html",
@@ -658,8 +651,7 @@
 		"/C/Users/Lucas/Downloads/startbootstrap-shop-homepage-1.0.3/startbootstrap-shop-homepage-1.0.3/index.html",
 		"/C/Users/Lucas/Desktop/Mongoose/EasyDelivery/content/css/styles/main.css",
 		"/C/Users/Lucas/Desktop/Mongoose/EasyDelivery/content/css/styles/compras.css",
-		"/C/Users/Lucas/Desktop/Mongoose/EasyDelivery/content/css/main.css",
-		"/C/Users/Lucas/Desktop/APPP/app/app/index.html"
+		"/C/Users/Lucas/Desktop/Mongoose/EasyDelivery/content/css/main.css"
 	],
 	"find":
 	{
@@ -883,37 +875,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "db.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1030,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								687,
-								687
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],

@@ -16,8 +16,8 @@
             <form name="ProfessionalCadCtrl.listDetail">
                 <div class="form-group">
                     <span ng-show="ProfessionalCadCtrl.listDetail.name.$error.required">
-                        <div class="alert alert-danger"
-                            role="alert">Nome do professional é obrigatório!
+                        <div class="alert alert-warning"
+                            role="alert"><strong>Nome é obrigatório!</strong>
                         </div>
                     </span>
                     <input id="name"
@@ -31,8 +31,8 @@
                 </div>
                 <div class="form-group">
                     <span ng-show="ProfessionalCadCtrl.listDetail.email.$error.required">
-                        <div class="alert alert-danger"
-                            role="alert">Email é Obrigatório!
+                        <div class="alert alert-warning"
+                            role="alert"><strong>Email é Obrigatório!</strong>
                         </div>
                     </span>
                     <input id="email"
@@ -44,41 +44,46 @@
                            type="email"
                            required>
                 </div>
-                <div class="inline">
+                <div class="row">
+                  <div class="col-md-6">
                     <div class="form-group">
-                        <span ng-show="ProfessionalCadCtrl.listDetail.phone.$error.required">
-                            <div class="alert alert-danger"
-                                role="alert">Telefone obrigatório!
-                            </div>
-                        </span>
-                        <input id="phone"
-                               class="form-control"
-                               maxlength="25"
-                               name="phone"
-                               mask="(99) 9?9999-9999"
-                               data-ng-model="ProfessionalCadCtrl.professional.phone"
-                               placeholder="Telefone do Profissional"
-                               type="text"
-                               required>
-                    </div>
+                    <span ng-show="ProfessionalCadCtrl.listDetail.phone.$error.required">
+                        <div class="alert alert-warning"
+                            role="alert"><strong>Telefone é obrigatório!</strong>
+                        </div>
+                    </span>
+                    <input id="phone"
+                           class="form-control"
+                           maxlength="25"
+                           name="phone"
+                           mask="(99) 9999-9999"
+                           data-ng-model="ProfessionalCadCtrl.professional.phone"
+                           placeholder="Telefone do Profissional"
+                           type="text"
+                           required>
+                    </div><!-- /input-group -->
+                  </div><!-- /.col-lg-6 -->
+                  <div class="col-md-6">
                     <div class="form-group">
                         <span ng-show="ProfessionalCadCtrl.listDetail.cpf.$error.required">
-                            <div class="alert alert-danger"
-                                role="alert">CPF obrigatório!
-                            </div>
-                        </span>
-                        <input id="cpf"
-                               class="form-control"
-                               maxlength="25"
-                               name="cpf"
-                               mask="999.999.999-99"
-                               data-ng-model="ProfessionalCadCtrl.professional.cpf"
-                               placeholder="CPF do Profissional"
-                               type="text"
-                               required>
-                    </div>
-                </div>
+                        <div class="alert alert-warning"
+                            role="alert"><strong>CPF é obrigatório!</strong>
+                        </div>
+                    </span>
+                    <input id="cpf"
+                           class="form-control"
+                           maxlength="25"
+                           name="cpf"
+                           mask="999.999.999-99"
+                           data-ng-model="ProfessionalCadCtrl.professional.cpf"
+                           placeholder="CPF do Profissional"
+                           type="text"
+                           required>
+                    </div><!-- /input-group -->
+                  </div><!-- /.col-lg-6 -->
+                </div><!-- /.row -->
                 <hr>
+            </form>
                 <div class="form-group">
                     <button class="btn btn-default"
                             data-ng-click="ProfessionalCadCtrl.cancelar()"
@@ -96,7 +101,6 @@
                     </button>
                     <input class="btn btn-default" type="reset" name="reset" value="Limpar">
                 </div>
-            </form>
         </div>
     </div>
 </div>

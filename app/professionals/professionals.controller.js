@@ -22,15 +22,17 @@
         var viewModel = this;
 
         var ProfessionalService = $injector.get('app.professionals.ProfessionalService');
-        var PublicProparties = {
+        var PublicProperties = {
             deletar: _deletar,
             getSearch: _getSearch,
             getTotalProfessionals: _getTotalProfessionals,
             numPages: _numPages,
-            openModalEdit: _openModalEdit
+            openModalEdit: _openModalEdit,
+            refresh: _refresh
+
         };
 
-        _.extend(viewModel, PublicProparties);
+        _.extend(viewModel, PublicProperties);
 
         init();
 
@@ -39,7 +41,7 @@
                 viewModel.professionals = professionals;
                 viewModel.professionals.isLast = professionals.isLast;
             });
-        } 
+        }
 
 
         viewModel.currentPage = page(); // Pagina Atual.
@@ -54,28 +56,20 @@
         }
 
         function page() {
-            return 3;
+            return 1;
         }
 
         function pageSize() {
-            return 2;
+            return 20;
         }
 
         function getTotal() {
             return;
         }
 
-        function _getTotalProfessionals() {
-            return viewModel.professionals && viewModel.professionals.length;
-        }
 
-        function _getSearch(search) {
-           ProfessionalService.getList(page(), pageSize(), search).then(function(professionals) {
-               viewModel.professionals = professionals;
-           });
 
-           return viewModel.professionals;
-       }
+
 
 
         function _deletar(idProfessional) {
@@ -90,6 +84,18 @@
             }
         }
 
+        function _getSearch(search) {
+            ProfessionalService.getList(page(), pageSize(), search).then(function(professionals) {
+                viewModel.professionals = professionals;
+            });
+
+            return viewModel.professionals;
+        }
+
+        function _getTotalProfessionals() {
+            return viewModel.professionals && viewModel.professionals.length;
+        }
+
         function _openModalEdit(idProfessional) {
             $modal.open({
                 templateUrl: 'professionals/professionals.modalEdit.html',
@@ -101,6 +107,10 @@
                     }
                 }
             });
+        }
+
+        function _refresh() {
+            return init();
         }
 
     }

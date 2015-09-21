@@ -27,14 +27,14 @@
 
         var viewModel = this;
 
-        var publicProparties = {
+        var PublicProperties = {
             cancel: _cancel,
             closeModal: _closeModal,
             isSalvarDisabled: _isSalvarDisabled,
             salvar: _salvar
         };
 
-        _.extend(viewModel, publicProparties);
+        _.extend(viewModel, PublicProperties);
 
         init();
 
@@ -48,16 +48,20 @@
             return viewModel.listDetail.$invalid;
         }
 
-        function _closeModal() {
-            $modalInstance.close();
-        }
-
-        function _cancel() {
-            $modalInstance.dismiss('cancel');
+        function goToListarProfessionals() {
+            $location.path('/listProfessionals');
         }
 
         function watchController(){
             $rootScope.$broadcast('BOOM!', viewModel.professional.email)
+        }
+        
+        function _cancel() {
+            $modalInstance.dismiss('cancel');
+        }
+        
+        function _closeModal() {
+            $modalInstance.close();
         }
 
         function _isSalvarDisabled() {
@@ -67,17 +71,10 @@
             return isClean();
         }
 
-        function goToListarProfessionals() {
-            $location.path('/listProfessionals');
-        }
-
         function _salvar() {
             return ProfessionalService.salvar(viewModel.professional).then(function() {
                 $modalInstance.close();
-            }).then(function() {
-                watchController();
             });
         }
     }
-
 })();

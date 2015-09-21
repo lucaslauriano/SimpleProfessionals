@@ -23,14 +23,14 @@
         var ProfessionalService = $injector.get('app.professionals.ProfessionalService');
         var viewModel = this;
        
-        var publicProparties = {
+        var PublicProperties = {
             cancelar: _cancelar,
             deletar: _deletar,
             isSalvarDisabled: _isSalvarDisabled,
             salvar: _salvar
         };
 
-        _.extend(viewModel, publicProparties);
+        _.extend(viewModel, PublicProperties);
         
         init();
 

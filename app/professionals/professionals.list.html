@@ -6,26 +6,37 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-8">
                     <h4>Profissionais</h4>
                 </div>
-                <div class="col-md-3 col-md-offset-3">
-                    <form action="" class="search-form">
-                        <div class="form-group has-feedback">
-                            <label for="ProfessionalsCtrl.q" class="sr-only"></label>
-                            <input type="text"
-                                   class="form-control"
-                                   name="ProfessionalsCtrl.q"
-                                   
-                                   placeholder="Buscar"
-                                   data-ng-model="ProfessionalsCtrl.q">
-                           
-                        <a data-ng-click="ProfessionalsCtrl.getSearch(ProfessionalsCtrl.q)"
-                           class="btn btn-default btn-sm">
-                          <i class="glyphicon glyphicon-search"></i>
+                <div class="col-md-4">
+                  <div class="col-lg-13">
+                    <div class="input-group">
+                      <span class="input-group-btn">
+                        <a data-ng-click="ProfessionalsCtrl.refresh()"
+                           class="btn btn-default" 
+                           type="button"
+                           popover="Recarregar"
+                           popover-trigger="mouseenter">
+                          <i class="glyphicon glyphicon-refresh"></i>
                         </a>
-                        </div>
-                    </form>
+                      </span>
+                      <input type="text" 
+                             class="form-control"
+                             name="ProfessionalsCtrl.q" 
+                             placeholder="Buscar"
+                             data-ng-model="ProfessionalsCtrl.q">
+                       <span class="input-group-btn">
+                        <a  data-ng-click="ProfessionalsCtrl.getSearch(ProfessionalsCtrl.q)"
+                            class="btn btn-default" 
+                            type="button"
+                            popover="Pesquisar"
+                            popover-trigger="mouseenter">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </a>
+                      </span>
+                    </div><!-- /input-group -->
+                  </div><!-- /.col-lg-6 -->
                 </div>
             </div>
         </div>
@@ -104,6 +115,7 @@
               ng-disabled="false"
               class="pagination-sm" 
               ></pagination>
+        </td>
         </div>
     </div>
 </div>
