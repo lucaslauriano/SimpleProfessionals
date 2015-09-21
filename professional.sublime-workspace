@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"n",
+				"nav	Tag"
+			],
+			[
+				"tota",
+				"totalItens"
+			],
+			[
+				"co",
+				"copy"
+			],
+			[
 				"re",
 				"return"
 			],
@@ -22,10 +34,6 @@
 			[
 				"get",
 				"getTotal"
-			],
-			[
-				"co",
-				"console"
 			],
 			[
 				"is",
@@ -403,6 +411,22 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 1429,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/index.html",
+			"settings":
+			{
+				"buffer_size": 2685,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -411,24 +435,24 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 141.0,
-		"last_filter": "set json",
+		"height": 400.0,
+		"last_filter": "set js",
 		"selected_items":
 		[
+			[
+				"set js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"set ht",
+				"Set Syntax: HTML (Tcl)"
+			],
 			[
 				"set json",
 				"Set Syntax: JSON"
 			],
 			[
-				"set ht",
-				"Set Syntax: HTML"
-			],
-			[
 				"setjs",
-				"Set Syntax: JavaScript"
-			],
-			[
-				"set js",
 				"Set Syntax: JavaScript"
 			],
 			[
@@ -520,27 +544,29 @@
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/content/images",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/content/styles",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/main",
-		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals"
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals",
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/bower_components/angular-bootstrap"
 	],
 	"file_history":
 	[
-		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/db.json",
-		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.cad.html",
-		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/content/styles/main.css",
-		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.list.html",
-		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professsionals.service.js",
-		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.controller.js",
-		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals-cad.controller.js",
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/app.js",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/common/app.core.js",
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.list.html",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/index.html",
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.controller.js",
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/content/styles/main.css",
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/common/app.filter.js",
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals-cad.controller.js",
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.cad.html",
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.modal.controller.js",
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/main/nav-bar.html",
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/main/dashboard.html",
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/db.json",
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professsionals.service.js",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/common/app.route.js",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/professional.sublime-project",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.modalEdit.html",
-		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.modal.controller.js",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/README.md",
-		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/main/dashboard.html",
-		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/app.js",
-		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/main/nav-bar.html",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/bower.json",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/main/dashboard.directive.js",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professional/professional.list.html",
@@ -650,8 +676,7 @@
 		"/C/Users/Lucas/Desktop/Mongoose/EasyDelivery/views/contato.html",
 		"/C/Users/Lucas/Downloads/startbootstrap-shop-homepage-1.0.3/startbootstrap-shop-homepage-1.0.3/index.html",
 		"/C/Users/Lucas/Desktop/Mongoose/EasyDelivery/content/css/styles/main.css",
-		"/C/Users/Lucas/Desktop/Mongoose/EasyDelivery/content/css/styles/compras.css",
-		"/C/Users/Lucas/Desktop/Mongoose/EasyDelivery/content/css/main.css"
+		"/C/Users/Lucas/Desktop/Mongoose/EasyDelivery/content/css/styles/compras.css"
 	],
 	"find":
 	{
@@ -714,6 +739,8 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"pagina",
+			"            </",
 			"veg",
 			"COL",
 			"error",
@@ -839,9 +866,7 @@
 			"RestangularProvider",
 			"conso",
 			"main",
-			"$stateProvider",
-			"js",
-			"editList"
+			"$stateProvider"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -875,8 +900,67 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1429,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1429,
+								1429
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 390.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/index.html",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 2685,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		}
 	],

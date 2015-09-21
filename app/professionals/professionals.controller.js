@@ -39,7 +39,7 @@
         viewModel.currentPage = 1;
 
         function init() {
-            ProfessionalService.getList(page(), pageSize()).then(function(professionals) {
+            ProfessionalService.getList(page(), pageSize(), page()).then(function(professionals) {
                 viewModel.professionals = professionals;
                 viewModel.professionals.isLast = professionals.isLast;
             });
