@@ -37,9 +37,10 @@
         init();
 
         viewModel.currentPage = 1;
+        viewModel.q='';
 
         function init() {
-            ProfessionalService.getList(page(), pageSize()).then(function(professionals) {
+            ProfessionalService.getList(viewModel.currentPage, pageSize(),  viewModel.q).then(function(professionals) {
                 viewModel.professionals = professionals;
                 viewModel.professionals.isLast = professionals.isLast;
             });
@@ -50,8 +51,8 @@
             return viewModel.professionals && viewModel.professionals.length;
         }
 
-        function page() {
-            return viewModel.currentPage;
+        function isInvalid() {
+            return viewModel.detail.$invalid;
         }
 
         function pageSize() {
@@ -70,39 +71,31 @@
                 });
             }
         }
-
-
-
+//-------------------------------------------------------------
         function _nextPage() {
-            if (viewModel.professionals.isLast !== true) {
-                viewModel.currentPage++;
+            if (viewModel.professionals.isLast != true) {
+               viewModel.currentPage++;
+            }else {
+               return isInvalid();
             }
             $log.log(viewModel.currentPage);
-
-            return ProfessionalService.getList(viewModel.currentPage, pageSize()).then(function(professionals) {
-                viewModel.professionals = professionals;
-            });
+            return init();
         }
-
-        $log.log('VM', viewModel.currentPage);
 
         function _prevPage() {
             if (viewModel.currentPage > 0) {
-                viewModel.currentPage--;
+               viewModel.currentPage--;
+            } else {
+               return  viewModel.currentPage+1;
             }
-            return ProfessionalService.getList(viewModel.currentPage, pageSize()).then(function(professionals) {
-                viewModel.professionals = professionals;
-            });
+            $log.log(viewModel.currentPage);
+            return init();
         }
-
-
+//--------------------------------------------------------------
 
         function _getSearch(search) {
-            ProfessionalService.getList(page(), pageSize(), search).then(function(professionals) {
-                viewModel.professionals = professionals;
-            });
-
-            return viewModel.professionals;
+             viewModel.q=search;
+            return init();
         }
 
         function _getTotalProfessionals() {
@@ -123,7 +116,7 @@
         }
 
         function _refresh() {
-            return init();
+           return init();
         }
 
     }
