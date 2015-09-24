@@ -51,20 +51,12 @@
         }
 
         function page() {
-            return 1;
+            return viewModel.currentPage;
         }
 
         function pageSize() {
-            return 5;
+            return 1;
         }
-
-        // function next(){
-        //     $log.log("NEXT");
-        //    if(viewModel.professionals.isLast !==true){
-        //     viewModel.currentPage++;
-        //    }
-        //    return viewModel.currentPage;
-        // }
 
         //## Public ##//
         function _deletar(idProfessional) {
@@ -78,17 +70,32 @@
                 });
             }
         }
-        
+
+
+
         function _nextPage() {
-            // return next();
+            if (viewModel.professionals.isLast !== true) {
+                viewModel.currentPage++;
+            }
+            $log.log(viewModel.currentPage);
+
+            return ProfessionalService.getList(viewModel.currentPage, pageSize()).then(function(professionals) {
+                viewModel.professionals = professionals;
+            });
         }
 
+        $log.log('VM', viewModel.currentPage);
+
         function _prevPage() {
-/*            $log.log("Prev");
             if (viewModel.currentPage > 0) {
                 viewModel.currentPage--;
-            }*/
+            }
+            return ProfessionalService.getList(viewModel.currentPage, pageSize()).then(function(professionals) {
+                viewModel.professionals = professionals;
+            });
         }
+
+
 
         function _getSearch(search) {
             ProfessionalService.getList(page(), pageSize(), search).then(function(professionals) {
