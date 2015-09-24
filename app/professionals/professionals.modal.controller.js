@@ -51,10 +51,6 @@
         function goToListarProfessionals() {
             $location.path('/listProfessionals');
         }
-
-        function watchController(){
-            $rootScope.$broadcast('BOOM!', viewModel.professional.email)
-        }
         
         function _cancel() {
             $modalInstance.dismiss('cancel');

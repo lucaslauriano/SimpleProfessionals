@@ -99,34 +99,26 @@
         <div class="panel-footer">
         <nav>
           <ul class="pager">
-            <li><a data-ng-click="ProfessionalsCtrl.prevPage()"
-                  type="button"
-                  class="btn btn-default btn-sm">
-                  Anterior
+            <li class="ProfessionalsCtrl.prevDesabled">
+              <a data-ng-click="ProfessionalsCtrl.prevPage()"
+                 data-ng-disabled="ProfessionalsCtrl.prevDesabled()"
+                 type="button"
+                 name="ProfessionalsCtrl.detail"
+                 class="btn btn-default btn-sm">
+                  <span aria-hidden="true">&laquo;</span> Anterior
                 </a>
             </li>
             <li>
                 <a data-ng-click="ProfessionalsCtrl.nextPage()"
                    type="button"
-                   name="ProfessionalsCtrl.listDetail"
+                   ng-disabled="ProfessionalsCtrl.nextDesabled()"
+                   name="ProfessionalsCtrl.detail"
                    class="btn btn-default btn-sm">
-                   Proximo
+                   Proximo <span aria-hidden="true">&laquo;</span>
                 </a>
             </li>
           </ul>
         </nav>
-          <!--   <pagination 
-
-              total-items="ProfessionalsCtrl.totalItens" 
-              
-              ng-model="ProfessionalsCtrl.currentPage"
-
-              
-              max-size="ProfessionalsCtrl.maxSize"
-              previous-text="Anterior"
-              next-text="Próximo"
-              class="pagination-sm" 
-              ></pagination> -->
         </td>
         </div>
     </div>

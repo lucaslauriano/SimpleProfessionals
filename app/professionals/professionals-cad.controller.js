@@ -31,9 +31,7 @@
         };
 
         _.extend(viewModel, PublicProperties);
-        
 
-        //## Private ##//
         init();
 
         function init() {
@@ -52,7 +50,6 @@
             $location.path('/listProfessionals');
         }
 
-        //## Public ##//
         function _cancelar() {
             goToListarProfessionals();
         }

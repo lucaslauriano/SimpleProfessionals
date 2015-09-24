@@ -21,7 +21,7 @@
         var PublicMethods = {
             customGET: _customGET,
             get: _get,
-            getList: _getList,
+            customGETLIST: _customGETLIST,
             deletar: _deletar,
             salvar: _salvar
         };
@@ -32,14 +32,13 @@
             return Restangular.one('professionals', id).get();
         }
 
-        function _getList(_page, _pageSize, _q) {
+        function _customGETLIST(_page, _pageSize, _q) {
             return Restangular.all('professionals').customGETLIST("", {page: _page, pageSize: _pageSize, q: _q});
         }
 
         function _customGET(_q) {
             return Restangular.one('professionals').customGET("", {q: _q});
         }
-
 
         function _salvar(professional) {
             return !professional._id?

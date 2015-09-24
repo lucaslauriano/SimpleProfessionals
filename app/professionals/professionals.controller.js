@@ -26,7 +26,9 @@
             getSearch: _getSearch,
             getTotalProfessionals: _getTotalProfessionals,
             nextPage: _nextPage,
+            nextDesabled: _nextDesabled,
             openModalEdit: _openModalEdit,
+            prevDesabled: _prevDesabled,
             prevPage: _prevPage,
             refresh: _refresh
 
@@ -37,29 +39,23 @@
         init();
 
         viewModel.currentPage = 1;
-        viewModel.q='';
+        viewModel.q = '';
 
         function init() {
-            ProfessionalService.getList(viewModel.currentPage, pageSize(),  viewModel.q).then(function(professionals) {
+            ProfessionalService.customGETLIST(viewModel.currentPage, pageSize(), viewModel.q).then(function(professionals) {
                 viewModel.professionals = professionals;
                 viewModel.professionals.isLast = professionals.isLast;
             });
         }
 
-        //## Private ##//
         function totalItens() {
             return viewModel.professionals && viewModel.professionals.length;
         }
 
-        function isInvalid() {
-            return viewModel.detail.$invalid;
-        }
-
         function pageSize() {
-            return 1;
+            return 4;
         }
 
-        //## Public ##//
         function _deletar(idProfessional) {
             ProfessionalService.deletar(idProfessional).then(function() {
                 removerView(idProfessional);
@@ -71,30 +67,43 @@
                 });
             }
         }
-//-------------------------------------------------------------
-        function _nextPage() {
-            if (viewModel.professionals.isLast != true) {
-               viewModel.currentPage++;
-            }else {
-               return isInvalid();
+
+        function _prevDesabled() {
+            if (viewModel.currentPage === 1 ) {
+                return true;
             }
+        }
+
+        function _nextDesabled() {
+            if (viewModel.professionals.isLast) {
+                return true;
+            }
+        }
+
+        function _nextPage() {
+            if (viewModel.professionals.isLast !== true) {
+                viewModel.currentPage++;
+            } 
             $log.log(viewModel.currentPage);
             return init();
         }
 
         function _prevPage() {
             if (viewModel.currentPage > 0) {
-               viewModel.currentPage--;
-            } else {
-               return  viewModel.currentPage+1;
+                viewModel.currentPage--; 
             }
+            if (viewModel.currentPage === 0) {
+                viewModel.currentPage++;
+                return init();
+            }
+
+
             $log.log(viewModel.currentPage);
             return init();
         }
-//--------------------------------------------------------------
 
         function _getSearch(search) {
-             viewModel.q=search;
+            viewModel.q = search;
             return init();
         }
 
@@ -116,8 +125,9 @@
         }
 
         function _refresh() {
-           return init();
+            viewModel.currentPage = 1;
+             viewModel.q=''
+             return init();
         }
-
     }
 })();
