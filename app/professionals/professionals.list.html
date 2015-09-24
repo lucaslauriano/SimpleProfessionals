@@ -62,7 +62,8 @@
                     </tr>
                 </tfoot>
                 <tbody>
-                    <tr data-ng-repeat="professional in ProfessionalsCtrl.professionals"
+                    <tr data-ng-repeat="professional in ProfessionalsCtrl.professionals | filter:search | filter:searchText track by professional._id"
+                        data-ng-show="professional._id"
                         >
                         
                         <td>{{professional.name}}

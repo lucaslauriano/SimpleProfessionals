@@ -16,12 +16,12 @@
     ProfessionalModalCtrl.$inject = [
         '$injector',
         '$modalInstance',
-        '$rootScope',
         '$location',
+        '$log',
         'id'
     ];
 
-    function ProfessionalModalCtrl($injector, $modalInstance, $rootScope, $location, id) {
+    function ProfessionalModalCtrl($injector, $modalInstance, $location, $log, id) {
 
         var ProfessionalService = $injector.get('app.professionals.ProfessionalService');
 
@@ -40,7 +40,8 @@
 
         function init() {
             ProfessionalService.get(id).then(function(professional) {
-                viewModel.professional = _.first(professional.data);
+                viewModel.professional = professional.data;
+
             });
         }
 
