@@ -7,7 +7,7 @@
         <div class="panel-heading">
             <div class="row">
                 <div class="col-md-8">
-                    <h4>Profissionais</h4>{{ProfessionalsCtrl.professionals.isLast}}
+                    <h4>Profissionais</h4><!-- {{ProfessionalsCtrl.professionals.isLast}} -->
                 </div>
                 <div class="col-md-4">
                   <div class="col-lg-13">
@@ -105,8 +105,7 @@
                  data-ng-disabled="ProfessionalsCtrl.prevDesabled()"
                  type="button"
                  name="ProfessionalsCtrl.detail"
-                 class="btn btn-default btn-sm">
-                  <span aria-hidden="true">&laquo;</span> Anterior
+                 class="btn btn-default btn-sm"> Anterior
                 </a>
             </li>
             <li>
@@ -114,8 +113,7 @@
                    type="button"
                    ng-disabled="ProfessionalsCtrl.nextDesabled()"
                    name="ProfessionalsCtrl.detail"
-                   class="btn btn-default btn-sm">
-                   Proximo <span aria-hidden="true">&laquo;</span>
+                   class="btn btn-default btn-sm"> Proximo 
                 </a>
             </li>
           </ul>

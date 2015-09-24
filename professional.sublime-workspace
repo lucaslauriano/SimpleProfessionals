@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"in",
+				"init"
+			],
+			[
+				"po",
+				"professionals"
+			],
+			[
 				"n",
 				"nav	Tag"
 			],
@@ -62,10 +70,6 @@
 			[
 				"v",
 				"viewModel"
-			],
-			[
-				"in",
-				"injector"
 			],
 			[
 				"lIS",
@@ -412,11 +416,36 @@
 	"buffers":
 	[
 		{
+			"file": "app/professionals/professsionals.service.js",
+			"settings":
+			{
+				"buffer_size": 1544,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/professionals/professionals.list.html",
+			"settings":
+			{
+				"buffer_size": 5428,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "app/professionals/professionals.controller.js",
 			"settings":
 			{
-				"buffer_size": 3405,
+				"buffer_size": 3714,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": " {\"listDetail\":{\"$error\":{\"required\":[{\"$validators\":{},\"$asyncValidators\":{},\"$parsers\":[],\"$formatters\":[null],\"$viewChangeListeners\":[],\"$untouched\":true,\"$touched\":false,\"$pristine\":true,\"$dirty\":false,\"$valid\":false,\"$invalid\":true,\"$error\":{\"required\":true},\"$name\":\"email\",\"$options\":null}]},\"$name\":\"ProfessionalModalCtrl.listDetail\",\"$dirty\":false,\"$pristine\":true,\"$valid\":false,\"$invalid\":true,\"$submitted\":false,\"email\":{\"$validators\":{},\"$asyncValidators\":{},\"$parsers\":[],\"$formatters\":[null],\"$viewChangeListeners\":[],\"$untouched\":true,\"$touched\":false,\"$pristine\":true,\"$dirty\":false,\"$valid\":false,\"$invalid\":true,\"$error\":{\"required\":true},\"$name\":\"email\",\"$options\":null}}}",
+			"settings":
+			{
+				"buffer_size": 692,
+				"line_ending": "Windows",
+				"name": "{\"listDetail\":{\"$error\":{\"required\":[{\"$validator"
 			}
 		}
 	],
@@ -535,35 +564,34 @@
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/content",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/content/images",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/content/styles",
-		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/main",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals"
 	],
 	"file_history":
 	[
-		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/README.md",
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.modalEdit.html",
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.modal.controller.js",
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.cad.html",
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.list.html",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.controller.js",
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals-cad.controller.js",
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/main/main.html",
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/README.md",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/app.js",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/common/app.core.js",
-		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.list.html",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/index.html",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/content/styles/main.css",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/common/app.filter.js",
-		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals-cad.controller.js",
-		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.cad.html",
-		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.modal.controller.js",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/main/nav-bar.html",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/main/dashboard.html",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/db.json",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professsionals.service.js",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/common/app.route.js",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/professional.sublime-project",
-		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.modalEdit.html",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/bower.json",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/main/dashboard.directive.js",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professional/professional.list.html",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/main/nav-bar.directive.js",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professional/professional-cad.controller.js",
-		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/main/main.html",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/test/spec/controllers/about.js",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/test/spec/controllers/main.js",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/scripts/controllers/about.js",
@@ -671,7 +699,7 @@
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 22.0
 	},
 	"find_in_files":
 	{
@@ -730,6 +758,11 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"class",
+			";\n",
+			"\n        ",
+			"            ",
+			"1",
 			"pagina",
 			"            </",
 			"veg",
@@ -852,12 +885,7 @@
 			"lists",
 			"}\">",
 			"hover",
-			"input",
-			"todoApp.listas.ListaService",
-			"RestangularProvider",
-			"conso",
-			"main",
-			"$stateProvider"
+			"input"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -891,24 +919,84 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/professionals/professionals.controller.js",
-					"semi_transient": true,
+					"file": "app/professionals/professsionals.service.js",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3405,
+						"buffer_size": 1544,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								982,
-								974
+								405,
+								405
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 84.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/professionals/professionals.list.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5428,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3056,
+								3056
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 630.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/professionals/professionals.controller.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3714,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2271,
+								2277
 							]
 						],
 						"settings":
@@ -918,10 +1006,39 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 630.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 692,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								692,
+								692
+							]
+						],
+						"settings":
+						{
+							"auto_name": "{\"listDetail\":{\"$error\":{\"required\":[{\"$validator",
+							"default_dir": "C:\\Users\\Lucas\\Documents\\Projetos\\ProfessionalsCRUD",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -929,7 +1046,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 22.0
 	},
 	"input":
 	{
@@ -970,7 +1087,7 @@
 	"project": "professional.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 40.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1052,7 +1169,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 342.0,
+	"side_bar_width": 313.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
