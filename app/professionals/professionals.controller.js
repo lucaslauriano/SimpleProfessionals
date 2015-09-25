@@ -14,12 +14,14 @@
 
     ProfessionalsCtrl.$inject = [
         '$injector',
-        '$log',
+        '$rootScope',
         '$modal',
+        '$log'
     ];
 
-    function ProfessionalsCtrl($injector, $log, $modal) {
+    function ProfessionalsCtrl($injector, $rootScope, $modal, $log) {
         var viewModel = this;
+
         var ProfessionalService = $injector.get('app.professionals.ProfessionalService');
         var PublicProperties = {
             deletar: _deletar,
@@ -38,22 +40,22 @@
 
         init();
 
-        viewModel.currentPage = 1;
-        viewModel.q = '';
-
         function init() {
             ProfessionalService.customGETLIST(viewModel.currentPage, pageSize(), viewModel.q).then(function(professionals) {
                 viewModel.professionals = professionals;
                 viewModel.professionals.isLast = professionals.isLast;
             });
-        }
 
-        function totalItens() {
-            return viewModel.professionals && viewModel.professionals.length;
+            viewModel.currentPage = 1;
+            viewModel.q = '';
         }
 
         function pageSize() {
             return 4;
+        }
+
+        function totalItens() {
+            return viewModel.professionals && viewModel.professionals.length;
         }
 
         function _deletar(idProfessional) {
@@ -68,8 +70,12 @@
             }
         }
 
+        $rootScope.$on('att', function(ev, args) {
+            init();
+        });
+
         function _prevDesabled() {
-            if (viewModel.currentPage === 1 ) {
+            if (viewModel.currentPage === 1) {
                 return true;
             }
         }
@@ -83,22 +89,19 @@
         function _nextPage() {
             if (viewModel.professionals.isLast !== true) {
                 viewModel.currentPage++;
-            } 
+            }
             $log.log(viewModel.currentPage);
             return init();
         }
 
         function _prevPage() {
             if (viewModel.currentPage > 0) {
-                viewModel.currentPage--; 
+                viewModel.currentPage--;
             }
             if (viewModel.currentPage === 0) {
                 viewModel.currentPage++;
                 return init();
             }
-
-
-            $log.log(viewModel.currentPage);
             return init();
         }
 
@@ -125,9 +128,7 @@
         }
 
         function _refresh() {
-            viewModel.currentPage = 1;
-             viewModel.q=''
-             return init();
+            return init();
         }
     }
 })();

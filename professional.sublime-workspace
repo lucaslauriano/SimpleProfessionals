@@ -427,25 +427,24 @@
 			"file": "app/professionals/professionals.list.html",
 			"settings":
 			{
-				"buffer_size": 5428,
+				"buffer_size": 5321,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/professionals/professionals.modal.controller.js",
+			"settings":
+			{
+				"buffer_size": 2097,
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "app/professionals/professionals.controller.js",
 			"settings":
 			{
-				"buffer_size": 3714,
+				"buffer_size": 3831,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": " {\"listDetail\":{\"$error\":{\"required\":[{\"$validators\":{},\"$asyncValidators\":{},\"$parsers\":[],\"$formatters\":[null],\"$viewChangeListeners\":[],\"$untouched\":true,\"$touched\":false,\"$pristine\":true,\"$dirty\":false,\"$valid\":false,\"$invalid\":true,\"$error\":{\"required\":true},\"$name\":\"email\",\"$options\":null}]},\"$name\":\"ProfessionalModalCtrl.listDetail\",\"$dirty\":false,\"$pristine\":true,\"$valid\":false,\"$invalid\":true,\"$submitted\":false,\"email\":{\"$validators\":{},\"$asyncValidators\":{},\"$parsers\":[],\"$formatters\":[null],\"$viewChangeListeners\":[],\"$untouched\":true,\"$touched\":false,\"$pristine\":true,\"$dirty\":false,\"$valid\":false,\"$invalid\":true,\"$error\":{\"required\":true},\"$name\":\"email\",\"$options\":null}}}",
-			"settings":
-			{
-				"buffer_size": 692,
-				"line_ending": "Windows",
-				"name": "{\"listDetail\":{\"$error\":{\"required\":[{\"$validator"
 			}
 		}
 	],
@@ -568,11 +567,11 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.controller.js",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.modalEdit.html",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.modal.controller.js",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.cad.html",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.list.html",
-		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals.controller.js",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/professionals/professionals-cad.controller.js",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/app/main/main.html",
 		"/C/Users/Lucas/Documents/Projetos/ProfessionalsCRUD/README.md",
@@ -949,7 +948,7 @@
 						"translation.y": 84.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -958,15 +957,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5428,
+						"buffer_size": 5321,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3056,
-								3056
+								5195,
+								5195
 							]
 						],
 						"settings":
@@ -976,27 +975,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 630.0,
+						"translation.y": 1050.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "app/professionals/professionals.controller.js",
+					"file": "app/professionals/professionals.modal.controller.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3714,
+						"buffer_size": 2097,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2271,
-								2277
+								1238,
+								1238
 							]
 						],
 						"settings":
@@ -1006,7 +1005,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 630.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1014,31 +1013,32 @@
 				},
 				{
 					"buffer": 3,
+					"file": "app/professionals/professionals.controller.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 692,
+						"buffer_size": 3831,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								692,
-								692
+								2092,
+								2092
 							]
 						],
 						"settings":
 						{
-							"auto_name": "{\"listDetail\":{\"$error\":{\"required\":[{\"$validator",
-							"default_dir": "C:\\Users\\Lucas\\Documents\\Projetos\\ProfessionalsCRUD",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 653.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]

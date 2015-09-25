@@ -17,11 +17,12 @@
         '$injector',
         '$modalInstance',
         '$location',
+        '$rootScope',
         '$log',
         'id'
     ];
 
-    function ProfessionalModalCtrl($injector, $modalInstance, $location, $log, id) {
+    function ProfessionalModalCtrl($injector, $modalInstance, $location, $rootScope, $log, id) {
 
         var ProfessionalService = $injector.get('app.professionals.ProfessionalService');
 
@@ -43,6 +44,10 @@
                 viewModel.professional = professional.data;
 
             });
+        }
+
+        function attView(){
+            $rootScope.$emit('att',  viewModel.professional.email);
         }
 
         function isInvalid() {
@@ -67,10 +72,12 @@
             }
             return isClean();
         }
-
+        
         function _salvar() {
             return ProfessionalService.salvar(viewModel.professional).then(function() {
                 $modalInstance.close();
+            }).then(function() {
+                attView();
             });
         }
     }
