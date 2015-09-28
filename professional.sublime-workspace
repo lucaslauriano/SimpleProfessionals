@@ -443,7 +443,7 @@
 			"file": "app/professionals/professionals.controller.js",
 			"settings":
 			{
-				"buffer_size": 3831,
+				"buffer_size": 3722,
 				"line_ending": "Windows"
 			}
 		}
@@ -757,6 +757,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"\n            ",
 			"class",
 			";\n",
 			"\n        ",
@@ -883,8 +884,7 @@
 			"());",
 			"lists",
 			"}\">",
-			"hover",
-			"input"
+			"hover"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -918,7 +918,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -994,8 +994,8 @@
 						"selection":
 						[
 							[
-								1238,
-								1238
+								615,
+								617
 							]
 						],
 						"settings":
@@ -1008,7 +1008,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -1017,15 +1017,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3831,
+						"buffer_size": 3722,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2092,
-								2092
+								1660,
+								1660
 							]
 						],
 						"settings":
@@ -1035,10 +1035,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 653.0,
+						"translation.y": 1092.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]

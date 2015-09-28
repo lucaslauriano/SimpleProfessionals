@@ -22,6 +22,10 @@
     function ProfessionalsCtrl($injector, $rootScope, $modal, $log) {
         var viewModel = this;
 
+
+            viewModel.currentPage = 1;
+            viewModel.q = '';
+
         var ProfessionalService = $injector.get('app.professionals.ProfessionalService');
         var PublicProperties = {
             deletar: _deletar,
@@ -46,8 +50,6 @@
                 viewModel.professionals.isLast = professionals.isLast;
             });
 
-            viewModel.currentPage = 1;
-            viewModel.q = '';
         }
 
         function pageSize() {
@@ -90,7 +92,6 @@
             if (viewModel.professionals.isLast !== true) {
                 viewModel.currentPage++;
             }
-            $log.log(viewModel.currentPage);
             return init();
         }
 
@@ -128,6 +129,10 @@
         }
 
         function _refresh() {
+
+            viewModel.currentPage = 1;
+            viewModel.q = '';
+
             return init();
         }
     }
